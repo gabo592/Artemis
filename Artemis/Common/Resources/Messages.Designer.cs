@@ -59,5 +59,176 @@ namespace Common.Resources {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a El campo Cantidad del registro contiene un valor no admitido por el sistema,.
+        /// </summary>
+        internal static string CANTIDAD_DEFAULT {
+            get {
+                return ResourceManager.GetString("CANTIDAD_DEFAULT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a La contraseña del registro es muy corta. Digite al menos 5 caracteres..
+        /// </summary>
+        internal static string CONTRASEÑA_CORTA {
+            get {
+                return ResourceManager.GetString("CONTRASEÑA_CORTA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a La contraseña del registro contiene valores no permitidos por el sistema..
+        /// </summary>
+        internal static string CONTRASEÑA_DEFAULT {
+            get {
+                return ResourceManager.GetString("CONTRASEÑA_DEFAULT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a La cantidad de caracteres del Correo excede la permitida..
+        /// </summary>
+        internal static string CORREO_LONGITUD_EXCEDIDA {
+            get {
+                return ResourceManager.GetString("CORREO_LONGITUD_EXCEDIDA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a El campo Costo de Envío del registro contiene valores negativos..
+        /// </summary>
+        internal static string COSTO_ENVIO_NEGATIVO {
+            get {
+                return ResourceManager.GetString("COSTO_ENVIO_NEGATIVO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a El campo Descuento del registro contiene valores negativos.
+        /// </summary>
+        internal static string DESCUENTO_NEGATIVO {
+            get {
+                return ResourceManager.GetString("DESCUENTO_NEGATIVO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Un registro desea realizar una operación pero no se encuentra habilitado..
+        /// </summary>
+        internal static string ESTADO_DESACTIVADO {
+            get {
+                return ResourceManager.GetString("ESTADO_DESACTIVADO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a La fecha del registro contiene valores no admitidos por el sistema..
+        /// </summary>
+        internal static string FECHA_DEFAULT {
+            get {
+                return ResourceManager.GetString("FECHA_DEFAULT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a El ID del registro contiene un valor no admitido por el sistema..
+        /// </summary>
+        internal static string ID_DEFAULT {
+            get {
+                return ResourceManager.GetString("ID_DEFAULT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a El ID del empleado relacionado al registro contiene un valor no admitido por el sistema..
+        /// </summary>
+        internal static string ID_EMPLEADO_DEFAULT {
+            get {
+                return ResourceManager.GetString("ID_EMPLEADO_DEFAULT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a El ID del Municipio al que está relacionado el registro contiene un valor no admitido por el sistema..
+        /// </summary>
+        internal static string ID_MUNICIPIO_DEFAULT {
+            get {
+                return ResourceManager.GetString("ID_MUNICIPIO_DEFAULT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a El ID del producto asociado al registro contiene un valor no admitido por el sistema..
+        /// </summary>
+        internal static string ID_PRODUCTO_DEFAULT {
+            get {
+                return ResourceManager.GetString("ID_PRODUCTO_DEFAULT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a No se logró encontrar o identificar el modelo..
+        /// </summary>
+        internal static string MODELO_NULO {
+            get {
+                return ResourceManager.GetString("MODELO_NULO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a El nombre del registro contiene un valor no admitido por el sistema..
+        /// </summary>
+        internal static string NOMBRE_DEFAULT {
+            get {
+                return ResourceManager.GetString("NOMBRE_DEFAULT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a El campo Primer Apellido del registro contiene valores no admitidos por el sistema..
+        /// </summary>
+        internal static string PRIMER_APELLIDO_DEFAULT {
+            get {
+                return ResourceManager.GetString("PRIMER_APELLIDO_DEFAULT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a El campo Primer Nombre del registro contiene valores no admitidos por el sistema..
+        /// </summary>
+        internal static string PRIMER_NOMBRE_DEFAULT {
+            get {
+                return ResourceManager.GetString("PRIMER_NOMBRE_DEFAULT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a La longitud de caracteres del Primer Nombre excede la permitida..
+        /// </summary>
+        internal static string PRIMER_NOMBRE_LONGITUD_EXCEDIDA {
+            get {
+                return ResourceManager.GetString("PRIMER_NOMBRE_LONGITUD_EXCEDIDA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a La longitud de caracteres del Segundo Apellido excede la permitida..
+        /// </summary>
+        internal static string SEGUNDO_APELLIDO_LONGITUD_EXCEDIDA {
+            get {
+                return ResourceManager.GetString("SEGUNDO_APELLIDO_LONGITUD_EXCEDIDA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a La longitud de caracteres del Segundo Nombre excede la permitida..
+        /// </summary>
+        internal static string SEGUNDO_NOMBRE_LONGITUD_EXCEDIDA {
+            get {
+                return ResourceManager.GetString("SEGUNDO_NOMBRE_LONGITUD_EXCEDIDA", resourceCulture);
+            }
+        }
     }
 }
