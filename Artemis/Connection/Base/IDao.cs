@@ -7,7 +7,7 @@ namespace Connection.Base
     /// en una base de datos.
     /// </summary>
     /// <typeparam name="TModel">Tipo de modelo que interactúa con la base de datos.</typeparam>
-    internal interface IDao<TModel> where TModel : new()
+    public interface IDao<TModel> where TModel : new()
     {
         /// <summary>
         /// Crea un nuevo registro en la base de datos del tipo de modelo especificado.

@@ -6,7 +6,7 @@ namespace Models.Common
     /// <summary>
     /// Objeto simple de tipo Producto.
     /// </summary>
-    internal class Producto : IIdentity, IActivable
+    public class Producto : IIdentity, IActivable
     {
         /// <inheritdoc cref="IIdentity.Id"/>
         public int Id { get; set; }

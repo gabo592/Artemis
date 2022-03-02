@@ -45,6 +45,11 @@
     <Compile Include="Base\IDao.cs" />
     <Compile Include="Base\Validaciones.cs" />
     <Compile Include="Database.cs" />
+    <Compile Include="Interfaces\Common\ICategoriaDao.cs" />
+    <Compile Include="Interfaces\Common\IDepartamentoDao.cs" />
+    <Compile Include="Interfaces\Common\IEmpleadoDao.cs" />
+    <Compile Include="Interfaces\Common\IMunicipioDao.cs" />
+    <Compile Include="Interfaces\Common\IProductoDao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -60,7 +65,6 @@
   <ItemGroup>
     <Folder Include="Common\" />
     <Folder Include="Identity\" />
-    <Folder Include="Interfaces\Common\" />
     <Folder Include="Interfaces\Identity\" />
     <Folder Include="Interfaces\Sales\" />
     <Folder Include="Interfaces\Shop\" />
