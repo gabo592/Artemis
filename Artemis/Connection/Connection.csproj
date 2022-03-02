@@ -50,6 +50,13 @@
     <Compile Include="Interfaces\Common\IEmpleadoDao.cs" />
     <Compile Include="Interfaces\Common\IMunicipioDao.cs" />
     <Compile Include="Interfaces\Common\IProductoDao.cs" />
+    <Compile Include="Interfaces\Identity\IUsuarioDao.cs" />
+    <Compile Include="Interfaces\Sales\IClienteDao.cs" />
+    <Compile Include="Interfaces\Sales\IDetalleVentaDao.cs" />
+    <Compile Include="Interfaces\Sales\IVentaDao.cs" />
+    <Compile Include="Interfaces\Shop\ICompraDao.cs" />
+    <Compile Include="Interfaces\Shop\IDetalleCompraDao.cs" />
+    <Compile Include="Interfaces\Shop\IProveedorDao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -65,9 +72,6 @@
   <ItemGroup>
     <Folder Include="Common\" />
     <Folder Include="Identity\" />
-    <Folder Include="Interfaces\Identity\" />
-    <Folder Include="Interfaces\Sales\" />
-    <Folder Include="Interfaces\Shop\" />
     <Folder Include="Sales\" />
     <Folder Include="Shop\" />
   </ItemGroup>
