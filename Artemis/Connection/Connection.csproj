@@ -33,6 +33,15 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Common, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Drawing.Common.6.0.0\lib\net461\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Drawing.Primitives.4.3.0\lib\net45\System.Drawing.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,6 +53,12 @@
     <Compile Include="Base\BaseDao.cs" />
     <Compile Include="Base\IDao.cs" />
     <Compile Include="Base\Validaciones.cs" />
+    <Compile Include="Common\CategoriaDao.cs" />
+    <Compile Include="Common\DepartamentoDao.cs" />
+    <Compile Include="Common\EmpleadoDao.cs" />
+    <Compile Include="Common\MunicipioDao.cs" />
+    <Compile Include="Common\ProductoDao.cs" />
+    <Compile Include="Constantes\StoredProcedures.cs" />
     <Compile Include="Database.cs" />
     <Compile Include="Interfaces\Common\ICategoriaDao.cs" />
     <Compile Include="Interfaces\Common\IDepartamentoDao.cs" />
@@ -70,10 +85,12 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Common\" />
     <Folder Include="Identity\" />
     <Folder Include="Sales\" />
     <Folder Include="Shop\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

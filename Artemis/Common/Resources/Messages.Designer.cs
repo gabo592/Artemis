@@ -133,11 +133,29 @@ namespace Common.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a El ID de la Categoría asociada al registro contiene un valor no permitido por el sistema..
+        /// </summary>
+        internal static string ID_CATEGORIA_DEFAULT {
+            get {
+                return ResourceManager.GetString("ID_CATEGORIA_DEFAULT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a El ID del registro contiene un valor no admitido por el sistema..
         /// </summary>
         internal static string ID_DEFAULT {
             get {
                 return ResourceManager.GetString("ID_DEFAULT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a El ID del Departamento asociado al registro contiene un valor no permitido por el sistema..
+        /// </summary>
+        internal static string ID_DEPARTAMENTO_DEFAULT {
+            get {
+                return ResourceManager.GetString("ID_DEPARTAMENTO_DEFAULT", resourceCulture);
             }
         }
         

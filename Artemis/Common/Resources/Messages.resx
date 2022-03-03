@@ -141,8 +141,14 @@
   <data name="FECHA_DEFAULT" xml:space="preserve">
     <value>La fecha del registro contiene valores no admitidos por el sistema.</value>
   </data>
+  <data name="ID_CATEGORIA_DEFAULT" xml:space="preserve">
+    <value>El ID de la Categoría asociada al registro contiene un valor no permitido por el sistema.</value>
+  </data>
   <data name="ID_DEFAULT" xml:space="preserve">
     <value>El ID del registro contiene un valor no admitido por el sistema.</value>
+  </data>
+  <data name="ID_DEPARTAMENTO_DEFAULT" xml:space="preserve">
+    <value>El ID del Departamento asociado al registro contiene un valor no permitido por el sistema.</value>
   </data>
   <data name="ID_EMPLEADO_DEFAULT" xml:space="preserve">
     <value>El ID del empleado relacionado al registro contiene un valor no admitido por el sistema.</value>
