@@ -19,19 +19,11 @@ namespace Connection.Interfaces.Identity
 
         /// <summary>
         /// Realiza la búsqueda de registros de tipo Usuario en base
-        /// al rol proporcionado.
+        /// al valor proporcionado. Puede ser por nombre de usuario o rol.
         /// </summary>
-        /// <param name="rol">Rol o papel que juega el usuario dentro del sistema.</param>
-        /// <returns>Colección de objetos de tipo Empleado que coincidan con el parámetro de búsqueda.</returns>
-        IEnumerable<Usuario> FindByRol(string rol);
-
-        /// <summary>
-        /// Realiza la búsqueda de registros de tipo Usuario en base
-        /// al nombre proporcionado.
-        /// </summary>
-        /// <param name="name">Nombre de usuario.</param>
+        /// <param name="value">Valor a filtrar</param>
         /// <returns>Colección de objetos de tipo Usuario que coincidan con el parámetro de búsqueda.</returns>
-        IEnumerable<Usuario> FindByName(string name);
+        IEnumerable<Usuario> Read(string value);
 
         /// <summary>
         /// Realiza la búsqueda de registros de tipo Usuario en base
@@ -40,5 +32,15 @@ namespace Connection.Interfaces.Identity
         /// <param name="idEmpleado">Identificador único del empleado asociado al usuario.</param>
         /// <returns>Objeto de tipo Usuario que coincida con el parámetro de búsqueda.</returns>
         Usuario FindByIdEmpleado(int idEmpleado);
+
+        /// <summary>
+        /// Verifica en la base de datos si existe un usuario en base
+        /// a las credenciales proporcionadas para realizar el login
+        /// al sistema.
+        /// </summary>
+        /// <param name="nombre">Nombre de usuario.</param>
+        /// <param name="contraseña">Contraseña del usuario.</param>
+        /// <returns>Objeto de tipo usuario que coincida con las credenciales.</returns>
+        Usuario Login(string nombre, string contraseña);
     }
 }

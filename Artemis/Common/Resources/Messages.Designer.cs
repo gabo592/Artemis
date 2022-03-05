@@ -142,6 +142,24 @@ namespace Common.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a El ID del Cliente asociado al registro contiene un valor no permitido por el sistema..
+        /// </summary>
+        internal static string ID_CLIENTE_DEFAULT {
+            get {
+                return ResourceManager.GetString("ID_CLIENTE_DEFAULT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a El ID de la compra asociada al registro contiene un valor no admitido por el sistema..
+        /// </summary>
+        internal static string ID_COMPRA_DEFAULT {
+            get {
+                return ResourceManager.GetString("ID_COMPRA_DEFAULT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a El ID del registro contiene un valor no admitido por el sistema..
         /// </summary>
         internal static string ID_DEFAULT {
@@ -183,6 +201,24 @@ namespace Common.Resources {
         internal static string ID_PRODUCTO_DEFAULT {
             get {
                 return ResourceManager.GetString("ID_PRODUCTO_DEFAULT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a El ID del proveedor asociado al registro contiene un valor no admitido por el sistema..
+        /// </summary>
+        internal static string ID_PROVEEDOR_DEFAULT {
+            get {
+                return ResourceManager.GetString("ID_PROVEEDOR_DEFAULT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a El ID de la venta asociada al registro contiene un valor no permitido por el sistema..
+        /// </summary>
+        internal static string ID_VENTA_DEFAULT {
+            get {
+                return ResourceManager.GetString("ID_VENTA_DEFAULT", resourceCulture);
             }
         }
         
