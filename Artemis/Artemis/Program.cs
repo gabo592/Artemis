@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using Artemis.Presentacion.Principal;
 
 namespace Artemis
 {
@@ -16,7 +14,9 @@ namespace Artemis
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Login login = new Login();
+            login.Show();
+            Application.Run();
         }
     }
 }
