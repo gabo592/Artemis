@@ -133,6 +133,8 @@ namespace Connection
 
                     if (value is double && property.PropertyType == typeof(decimal)) value = Convert.ToDecimal(value);
 
+                    if (value is byte[] && property.PropertyType == typeof(string)) value = string.Empty;
+
                     property.SetValue(model, value);
                 }
 

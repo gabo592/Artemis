@@ -192,4 +192,7 @@
   <data name="SEGUNDO_NOMBRE_LONGITUD_EXCEDIDA" xml:space="preserve">
     <value>La longitud de caracteres del Segundo Nombre excede la permitida.</value>
   </data>
+  <data name="USUARIO_NULO" xml:space="preserve">
+    <value>No se logró encontrar un usuario con la información brindada.</value>
+  </data>
 </root>

@@ -284,5 +284,14 @@ namespace Common.Resources {
                 return ResourceManager.GetString("SEGUNDO_NOMBRE_LONGITUD_EXCEDIDA", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a No se logró encontrar un usuario con la información brindada..
+        /// </summary>
+        internal static string USUARIO_NULO {
+            get {
+                return ResourceManager.GetString("USUARIO_NULO", resourceCulture);
+            }
+        }
     }
 }

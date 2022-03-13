@@ -76,7 +76,7 @@
             this.pnlDatos.ColumnCount = 3;
             this.pnlDatos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 91.78471F));
             this.pnlDatos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.215298F));
-            this.pnlDatos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 9F));
+            this.pnlDatos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 10F));
             this.pnlDatos.Controls.Add(this.txtUsuario, 0, 1);
             this.pnlDatos.Controls.Add(this.txtContraseña, 0, 2);
             this.pnlDatos.Controls.Add(this.pbContraseña, 1, 2);
@@ -156,7 +156,7 @@
             this.txtUsuario.SelectionLength = 0;
             this.txtUsuario.SelectionStart = 0;
             this.txtUsuario.ShortcutsEnabled = true;
-            this.txtUsuario.Size = new System.Drawing.Size(318, 48);
+            this.txtUsuario.Size = new System.Drawing.Size(317, 48);
             this.txtUsuario.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtUsuario.TabIndex = 0;
             this.txtUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -233,7 +233,7 @@
             this.txtContraseña.SelectionLength = 0;
             this.txtContraseña.SelectionStart = 0;
             this.txtContraseña.ShortcutsEnabled = true;
-            this.txtContraseña.Size = new System.Drawing.Size(318, 47);
+            this.txtContraseña.Size = new System.Drawing.Size(317, 47);
             this.txtContraseña.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtContraseña.TabIndex = 1;
             this.txtContraseña.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -249,7 +249,7 @@
             this.pbContraseña.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbContraseña.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pbContraseña.Image = global::Artemis.Properties.Resources.eye_free_icon_font;
-            this.pbContraseña.Location = new System.Drawing.Point(327, 68);
+            this.pbContraseña.Location = new System.Drawing.Point(326, 68);
             this.pbContraseña.Name = "pbContraseña";
             this.pbContraseña.Size = new System.Drawing.Size(22, 47);
             this.pbContraseña.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -358,6 +358,7 @@
             this.btnIniciarSesion.TextMarginLeft = 0;
             this.btnIniciarSesion.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnIniciarSesion.UseDefaultRadiusAndThickness = true;
+            this.btnIniciarSesion.Click += new System.EventHandler(this.BtnIniciarSesion_Click);
             // 
             // btnCerrar
             // 

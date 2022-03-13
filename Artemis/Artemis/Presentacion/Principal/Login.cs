@@ -1,21 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Artemis.Properties;
+using Artemis.Servicios.Base;
+using Artemis.Servicios.Identity;
+using System;
 using System.Windows.Forms;
-using Artemis.Properties;
 
 namespace Artemis.Presentacion.Principal
 {
     public partial class Login : Form
     {
+        /// <summary>
+        /// Proveedor de servicios de usuario.
+        /// </summary>
+        private readonly UsuarioService Service;
+
         public Login()
         {
             InitializeComponent();
+            Service = new UsuarioService();
         }
 
         private void BtnCerrar_Click(object sender, EventArgs e)
@@ -34,6 +35,45 @@ namespace Artemis.Presentacion.Principal
             {
                 txtContraseña.PasswordChar = '*';
                 pbContraseña.Image = Resources.eye_free_icon_font;
+            }
+        }
+
+        /// <summary>
+        /// Realiza el inicio de sesión.
+        /// </summary>
+        private void DoLogin()
+        {
+            string nombre = txtUsuario.Text;
+            string contraseña = txtContraseña.Text;
+
+            Service.Login(nombre, contraseña);
+        }
+
+        private void BtnIniciarSesion_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DoLogin();
+
+                if (Service.HasError())
+                {
+                    MessageBox.Show(this, Service.GetErrorMessage(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (!Sesion.IsActive)
+                {
+                    MessageBox.Show(this, "No se logró establecer el usuario", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                Principal principal = new Principal();
+                principal.Show();
+                Hide();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(this, ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
