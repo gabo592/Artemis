@@ -13,9 +13,12 @@ namespace Artemis.Presentacion.Principal
 {
     public partial class Principal : KryptonForm
     {
+        private Form ChildForm;
+
         public Principal()
         {
             InitializeComponent();
+            pnlSideBar.Visible = false;
         }
 
         private void Principal_FormClosing(object sender, FormClosingEventArgs e)
@@ -30,6 +33,41 @@ namespace Artemis.Presentacion.Principal
 
             e.Cancel = false;
             Application.Exit();
+        }
+
+        private void AddForm(Form form)
+        {
+            if (ChildForm != null) ChildForm.Close();
+
+            ChildForm = form;
+
+            ChildForm.TopLevel = false;
+            ChildForm.FormBorderStyle = FormBorderStyle.None;
+            ChildForm.Dock = DockStyle.Fill;
+
+            pnlPrincipal.Controls.Add(ChildForm);
+            pnlPrincipal.Tag = ChildForm;
+
+            ChildForm.BringToFront();
+            ChildForm.Show();
+        }
+
+        private void PbMenu_Click(object sender, EventArgs e)
+        {
+            if (!pnlSideBar.Visible)
+            {
+                sideBarTransition.Show(pnlSideBar);
+                pnlSideBar.Visible = true;
+            }
+            else
+            {
+                pnlSideBar.Visible = false;
+            }
+        }
+
+        private void BtnCategorias_Click(object sender, EventArgs e)
+        {
+            AddForm(new Common.FrmCategorias());
         }
     }
 }

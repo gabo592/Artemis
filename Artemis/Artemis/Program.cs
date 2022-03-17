@@ -14,9 +14,7 @@ namespace Artemis
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Login login = new Login();
-            login.Show();
-            Application.Run();
+            Application.Run(new Login());
         }
     }
 }

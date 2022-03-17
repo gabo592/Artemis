@@ -43,17 +43,12 @@ namespace Artemis.Presentacion.Principal
         /// </summary>
         private void DoLogin()
         {
-            string nombre = txtUsuario.Text;
-            string contraseña = txtContraseña.Text;
-
-            Service.Login(nombre, contraseña);
-        }
-
-        private void BtnIniciarSesion_Click(object sender, EventArgs e)
-        {
             try
             {
-                DoLogin();
+                string nombre = txtUsuario.Text;
+                string contraseña = txtContraseña.Text;
+
+                Service.Login(nombre, contraseña);
 
                 if (Service.HasError())
                 {
@@ -75,6 +70,16 @@ namespace Artemis.Presentacion.Principal
             {
                 MessageBox.Show(this, ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void BtnIniciarSesion_Click(object sender, EventArgs e)
+        {
+            DoLogin();
+        }
+
+        private void TxtContraseña_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter) DoLogin();
         }
     }
 }

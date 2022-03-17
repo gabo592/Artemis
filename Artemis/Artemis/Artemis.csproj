@@ -172,6 +172,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Presentacion\Common\FrmCategorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Common\FrmCategorias.Designer.cs">
+      <DependentUpon>FrmCategorias.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\Principal\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,6 +196,9 @@
     <Compile Include="Servicios\Base\Sesion.cs" />
     <Compile Include="Servicios\DaoFactory.cs" />
     <Compile Include="Servicios\Identity\UsuarioService.cs" />
+    <EmbeddedResource Include="Presentacion\Common\FrmCategorias.resx">
+      <DependentUpon>FrmCategorias.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Principal\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -223,6 +232,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="artemis-logo.ico" />
+    <None Include="Resources\add-free-icon-font.png" />
+    <None Include="Resources\search-free-icon-font.png" />
+    <None Include="Resources\team.png" />
+    <None Include="Resources\categories.png" />
+    <None Include="Resources\list-free-icon-font.png" />
     <None Include="Resources\mc-green.png" />
     <None Include="Resources\mc-yellw.png" />
     <None Include="Resources\mc-red.png" />
