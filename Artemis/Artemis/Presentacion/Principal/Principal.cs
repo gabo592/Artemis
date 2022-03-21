@@ -67,7 +67,7 @@ namespace Artemis.Presentacion.Principal
 
         private void BtnCategorias_Click(object sender, EventArgs e)
         {
-            AddForm(new Common.FrmCategorias());
+            AddForm(new Common.FrmBuscadorCategorias());
         }
     }
 }

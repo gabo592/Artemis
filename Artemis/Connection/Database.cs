@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
+using System.IO;
 using System.Reflection;
 using System.Linq;
 using Common.Util;
@@ -85,7 +87,20 @@ namespace Connection
                     foreach (SqlParameter parameter in command.Parameters)
                     {
                         parameters.TryGetValue(RemueveSigno(parameter.ParameterName), out object value);
-                        parameter.Value = value is null ? DBNull.Value : value;
+
+                        if (value is null)
+                        {
+                            parameter.Value = DBNull.Value;
+                            continue;
+                        }
+                        
+                        if (value is Image image)
+                        {
+                            parameter.Value = ConvertImage(image);
+                            continue;
+                        }
+
+                        parameter.Value = value;
                     }
 
                     try
@@ -135,6 +150,13 @@ namespace Connection
 
                     if (value is byte[] && property.PropertyType == typeof(string)) value = string.Empty;
 
+                    if ((value is byte[]) && property.PropertyType == typeof(Image))
+                    {
+                        byte[] bytesImagen = (byte[])value;
+
+                        value = GetImage(bytesImagen);
+                    }
+
                     property.SetValue(model, value);
                 }
 
@@ -149,6 +171,31 @@ namespace Connection
         /// <param name="value">Cadena de texto a modificar.</param>
         /// <returns>Cadena de texto modificada sin el primer caracter.</returns>
         private string RemueveSigno(string value) => value.Substring(1);
+
+        /// <summary>
+        /// Obtiene una imagen dado un arreglo de bytes que conforman
+        /// dicha imagen.
+        /// </summary>
+        /// <param name="bytesImagen">Arreglo de bytes de la imagen.</param>
+        /// <returns>La imagen correspondiente al arreglo.</returns>
+        private Image GetImage(byte[] bytesImagen)
+        {
+            MemoryStream stream = new MemoryStream(bytesImagen);
+            return Image.FromStream(stream);
+        }
+
+        /// <summary>
+        /// Convierte una imagen a su respectivo arreglo de bytes.
+        /// </summary>
+        /// <param name="image">Imagen a conertir.</param>
+        /// <returns>Arreglo de bytes de la imagen correspondiente.</returns>
+        private byte[] ConvertImage(Image image)
+        {
+            MemoryStream stream = new MemoryStream();
+            image.Save(stream, image.RawFormat);
+
+            return stream.ToArray();
+        }
 
         #endregion
     }
