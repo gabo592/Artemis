@@ -113,5 +113,10 @@ namespace Artemis.Presentacion.Common
 
             Actualizar();
         }
+
+        private void TxtBuscar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            LoadDataGrid(txtBuscar.Text);
+        }
     }
 }

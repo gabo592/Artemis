@@ -454,6 +454,7 @@
             this.txtBuscar.TextPlaceholder = "Enter text";
             this.txtBuscar.UseSystemPasswordChar = false;
             this.txtBuscar.WordWrap = true;
+            this.txtBuscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtBuscar_KeyPress);
             // 
             // dgvCategorias
             // 
