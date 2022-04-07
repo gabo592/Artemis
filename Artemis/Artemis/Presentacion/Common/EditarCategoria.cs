@@ -9,7 +9,7 @@ using Models.Common;
 
 namespace Artemis.Presentacion.Common
 {
-    public partial class FrmEditarCategoria : Form, ISujeto
+    public partial class EditarCategoria : Form, ISujeto
     {
         #region Private Fields
 
@@ -30,7 +30,7 @@ namespace Artemis.Presentacion.Common
 
         #endregion
 
-        public FrmEditarCategoria(Categoria categoria)
+        public EditarCategoria(Categoria categoria)
         {
             InitializeComponent();
             Categoria = categoria;

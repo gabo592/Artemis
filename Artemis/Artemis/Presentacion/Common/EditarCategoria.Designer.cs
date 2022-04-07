@@ -1,6 +1,6 @@
 ﻿namespace Artemis.Presentacion.Common
 {
-    partial class FrmEditarCategoria
+    partial class EditarCategoria
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEditarCategoria));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditarCategoria));
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -76,6 +76,7 @@
             // pbCategoria
             // 
             this.pnlInfoCategoria.SetColumnSpan(this.pbCategoria, 2);
+            this.pbCategoria.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbCategoria.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pbCategoria.Image = global::Artemis.Properties.Resources.picture;
             this.pbCategoria.Location = new System.Drawing.Point(3, 21);

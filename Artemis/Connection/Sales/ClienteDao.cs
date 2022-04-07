@@ -49,6 +49,7 @@ namespace Connection.Sales
                 {"SegundoNombre", model.SegundoNombre },
                 {"PrimerApellido", model.PrimerApellido },
                 {"SegundoApellido", model.SegundoApellido },
+                {"FechaNacimiento", model.FechaNacimiento },
                 {"Correo", model.Correo },
                 {"Telefono", model.Telefono },
                 {"IdMunicipio", model.IdMunicipio }
@@ -66,8 +67,8 @@ namespace Connection.Sales
             }).FirstOrDefault() ?? null;
         }
 
-        /// <inheritdoc cref="IClienteDao.FindById(int)"/>
-        public Cliente FindById(int id)
+        /// <inheritdoc cref="IClienteDao.GetById(int)"/>
+        public Cliente GetById(int id)
         {
             if (id.Equals(default) || id < 0)
             {
@@ -131,6 +132,7 @@ namespace Connection.Sales
                 {"SegundoNombre", model.SegundoNombre },
                 {"PrimerApellido", model.PrimerApellido },
                 {"SegundoApellido", model.SegundoApellido },
+                {"FechaNacimiento", model.FechaNacimiento },
                 {"Correo", model.Correo },
                 {"Telefono", model.Telefono },
                 {"IdMunicipio", model.IdMunicipio }

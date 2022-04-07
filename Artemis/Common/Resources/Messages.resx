@@ -126,6 +126,9 @@
   <data name="CONTRASEÑA_DEFAULT" xml:space="preserve">
     <value>La contraseña del registro contiene valores no permitidos por el sistema.</value>
   </data>
+  <data name="CORREO_INCORRECTO" xml:space="preserve">
+    <value>No se reconoce el correo electrónico ingresado.</value>
+  </data>
   <data name="CORREO_LONGITUD_EXCEDIDA" xml:space="preserve">
     <value>La cantidad de caracteres del Correo excede la permitida.</value>
   </data>

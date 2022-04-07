@@ -29,21 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuAnimatorNS.Animation animation1 = new Bunifu.UI.WinForms.BunifuAnimatorNS.Animation();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.paletaDiseños = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.pnlTop = new System.Windows.Forms.Panel();
-            this.lblMenu = new System.Windows.Forms.Label();
-            this.pbMenu = new System.Windows.Forms.PictureBox();
             this.pnlSideBar = new System.Windows.Forms.Panel();
             this.btnClientes = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnCategorias = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.pnlPrincipal = new System.Windows.Forms.Panel();
-            this.sideBarTransition = new Bunifu.UI.WinForms.BunifuTransition(this.components);
-            this.pnlTop.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMenu)).BeginInit();
             this.pnlSideBar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -94,52 +88,21 @@
             // 
             // pnlTop
             // 
-            this.pnlTop.Controls.Add(this.lblMenu);
-            this.pnlTop.Controls.Add(this.pbMenu);
-            this.sideBarTransition.SetDecoration(this.pnlTop, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTop.Location = new System.Drawing.Point(0, 0);
             this.pnlTop.Name = "pnlTop";
-            this.pnlTop.Size = new System.Drawing.Size(1060, 24);
+            this.pnlTop.Size = new System.Drawing.Size(1060, 18);
             this.pnlTop.TabIndex = 0;
-            // 
-            // lblMenu
-            // 
-            this.sideBarTransition.SetDecoration(this.lblMenu, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.lblMenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblMenu.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMenu.ForeColor = System.Drawing.Color.White;
-            this.lblMenu.Location = new System.Drawing.Point(35, 0);
-            this.lblMenu.Name = "lblMenu";
-            this.lblMenu.Size = new System.Drawing.Size(49, 24);
-            this.lblMenu.TabIndex = 1;
-            this.lblMenu.Text = "Menú";
-            this.lblMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // pbMenu
-            // 
-            this.pbMenu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.sideBarTransition.SetDecoration(this.pbMenu, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.pbMenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pbMenu.Image = global::Artemis.Properties.Resources.list_free_icon_font;
-            this.pbMenu.Location = new System.Drawing.Point(0, 0);
-            this.pbMenu.Name = "pbMenu";
-            this.pbMenu.Size = new System.Drawing.Size(35, 24);
-            this.pbMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbMenu.TabIndex = 0;
-            this.pbMenu.TabStop = false;
-            this.pbMenu.Click += new System.EventHandler(this.PbMenu_Click);
             // 
             // pnlSideBar
             // 
             this.pnlSideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.pnlSideBar.Controls.Add(this.btnClientes);
             this.pnlSideBar.Controls.Add(this.btnCategorias);
-            this.sideBarTransition.SetDecoration(this.pnlSideBar, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.pnlSideBar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlSideBar.Location = new System.Drawing.Point(0, 24);
+            this.pnlSideBar.Location = new System.Drawing.Point(0, 18);
             this.pnlSideBar.Name = "pnlSideBar";
-            this.pnlSideBar.Size = new System.Drawing.Size(190, 463);
+            this.pnlSideBar.Size = new System.Drawing.Size(46, 469);
             this.pnlSideBar.TabIndex = 1;
             // 
             // btnClientes
@@ -156,7 +119,7 @@
             this.btnClientes.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
             this.btnClientes.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClientes.BackgroundImage")));
             this.btnClientes.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnClientes.ButtonText = "Clientes";
+            this.btnClientes.ButtonText = "";
             this.btnClientes.ButtonTextMarginLeft = 0;
             this.btnClientes.ColorContrastOnClick = 45;
             this.btnClientes.ColorContrastOnHover = 45;
@@ -166,7 +129,6 @@
             borderEdges1.TopLeft = true;
             borderEdges1.TopRight = true;
             this.btnClientes.CustomizableEdges = borderEdges1;
-            this.sideBarTransition.SetDecoration(this.btnClientes, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.btnClientes.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnClientes.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnClientes.DisabledFillColor = System.Drawing.Color.Empty;
@@ -227,13 +189,14 @@
             this.btnClientes.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnClientes.OnPressedState.IconLeftImage = null;
             this.btnClientes.OnPressedState.IconRightImage = null;
-            this.btnClientes.Size = new System.Drawing.Size(190, 39);
+            this.btnClientes.Size = new System.Drawing.Size(46, 39);
             this.btnClientes.TabIndex = 1;
             this.btnClientes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnClientes.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnClientes.TextMarginLeft = 0;
             this.btnClientes.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnClientes.UseDefaultRadiusAndThickness = true;
+            this.btnClientes.Click += new System.EventHandler(this.BtnClientes_Click);
             // 
             // btnCategorias
             // 
@@ -249,7 +212,7 @@
             this.btnCategorias.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
             this.btnCategorias.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCategorias.BackgroundImage")));
             this.btnCategorias.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnCategorias.ButtonText = "Categorías";
+            this.btnCategorias.ButtonText = "";
             this.btnCategorias.ButtonTextMarginLeft = 0;
             this.btnCategorias.ColorContrastOnClick = 45;
             this.btnCategorias.ColorContrastOnHover = 45;
@@ -259,7 +222,6 @@
             borderEdges2.TopLeft = true;
             borderEdges2.TopRight = true;
             this.btnCategorias.CustomizableEdges = borderEdges2;
-            this.sideBarTransition.SetDecoration(this.btnCategorias, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.btnCategorias.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnCategorias.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnCategorias.DisabledFillColor = System.Drawing.Color.Empty;
@@ -320,7 +282,7 @@
             this.btnCategorias.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnCategorias.OnPressedState.IconLeftImage = null;
             this.btnCategorias.OnPressedState.IconRightImage = null;
-            this.btnCategorias.Size = new System.Drawing.Size(190, 39);
+            this.btnCategorias.Size = new System.Drawing.Size(46, 39);
             this.btnCategorias.TabIndex = 0;
             this.btnCategorias.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnCategorias.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -331,33 +293,11 @@
             // 
             // pnlPrincipal
             // 
-            this.sideBarTransition.SetDecoration(this.pnlPrincipal, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.pnlPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlPrincipal.Location = new System.Drawing.Point(190, 24);
+            this.pnlPrincipal.Location = new System.Drawing.Point(46, 18);
             this.pnlPrincipal.Name = "pnlPrincipal";
-            this.pnlPrincipal.Size = new System.Drawing.Size(870, 463);
+            this.pnlPrincipal.Size = new System.Drawing.Size(1014, 469);
             this.pnlPrincipal.TabIndex = 2;
-            // 
-            // sideBarTransition
-            // 
-            this.sideBarTransition.AnimationType = Bunifu.UI.WinForms.BunifuAnimatorNS.AnimationType.HorizSlide;
-            this.sideBarTransition.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.sideBarTransition.DefaultAnimation = animation1;
             // 
             // Principal
             // 
@@ -368,7 +308,6 @@
             this.Controls.Add(this.pnlPrincipal);
             this.Controls.Add(this.pnlSideBar);
             this.Controls.Add(this.pnlTop);
-            this.sideBarTransition.SetDecoration(this, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Principal";
             this.Palette = this.paletaDiseños;
@@ -377,8 +316,6 @@
             this.Text = "Principal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Principal_FormClosing);
-            this.pnlTop.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbMenu)).EndInit();
             this.pnlSideBar.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -388,11 +325,8 @@
 
         private ComponentFactory.Krypton.Toolkit.KryptonPalette paletaDiseños;
         private System.Windows.Forms.Panel pnlTop;
-        private System.Windows.Forms.PictureBox pbMenu;
-        private System.Windows.Forms.Label lblMenu;
         private System.Windows.Forms.Panel pnlSideBar;
         private System.Windows.Forms.Panel pnlPrincipal;
-        private Bunifu.UI.WinForms.BunifuTransition sideBarTransition;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnCategorias;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnClientes;
     }

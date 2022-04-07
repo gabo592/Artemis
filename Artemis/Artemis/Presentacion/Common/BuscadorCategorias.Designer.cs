@@ -1,6 +1,6 @@
 ﻿namespace Artemis.Presentacion.Common
 {
-    partial class FrmBuscadorCategorias
+    partial class BuscadorCategorias
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBuscadorCategorias));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuscadorCategorias));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
@@ -437,7 +437,7 @@
             this.txtBuscar.Padding = new System.Windows.Forms.Padding(3);
             this.txtBuscar.PasswordChar = '\0';
             this.txtBuscar.PlaceholderForeColor = System.Drawing.Color.White;
-            this.txtBuscar.PlaceholderText = "Enter text";
+            this.txtBuscar.PlaceholderText = "Buscar";
             this.txtBuscar.ReadOnly = false;
             this.txtBuscar.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtBuscar.SelectedText = "";
@@ -451,7 +451,7 @@
             this.txtBuscar.TextMarginBottom = 0;
             this.txtBuscar.TextMarginLeft = 8;
             this.txtBuscar.TextMarginTop = 1;
-            this.txtBuscar.TextPlaceholder = "Enter text";
+            this.txtBuscar.TextPlaceholder = "Buscar";
             this.txtBuscar.UseSystemPasswordChar = false;
             this.txtBuscar.WordWrap = true;
             this.txtBuscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtBuscar_KeyPress);
@@ -703,7 +703,7 @@
             this.txtRecaudacion.UseSystemPasswordChar = false;
             this.txtRecaudacion.WordWrap = true;
             // 
-            // FrmBuscadorCategorias
+            // BuscadorCategorias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -716,7 +716,7 @@
             this.Controls.Add(this.lblCategorias);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "FrmBuscadorCategorias";
+            this.Name = "BuscadorCategorias";
             this.Text = "FrmBuscadorCategorias";
             this.pnlBotones.ResumeLayout(false);
             this.pnlBuscar.ResumeLayout(false);

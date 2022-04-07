@@ -157,6 +157,8 @@ namespace Connection
                         value = GetImage(bytesImagen);
                     }
 
+                    if (value is null && property.PropertyType == typeof(DateTime)) value = DateTime.Now;
+
                     property.SetValue(model, value);
                 }
 

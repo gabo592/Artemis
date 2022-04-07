@@ -15,7 +15,7 @@ namespace Connection.Interfaces.Sales
         /// </summary>
         /// <param name="id">Identificador único del registro.</param>
         /// <returns>Objeto de tipo Cliente que coincida con el parámetro de búsqueda.</returns>
-        Cliente FindById(int id);
+        Cliente GetById(int id);
 
         /// <summary>
         /// Realiza la búsqueda de los registros de tipo Cliente

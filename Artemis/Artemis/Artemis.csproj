@@ -172,23 +172,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Presentacion\Base\FrmBuscador.cs">
+    <Compile Include="Presentacion\Base\Buscador.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\Base\FrmBuscador.Designer.cs">
-      <DependentUpon>FrmBuscador.cs</DependentUpon>
+    <Compile Include="Presentacion\Base\Buscador.Designer.cs">
+      <DependentUpon>Buscador.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\Common\FrmBuscadorCategorias.cs">
+    <Compile Include="Presentacion\Common\BuscadorCategorias.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\Common\FrmBuscadorCategorias.Designer.cs">
-      <DependentUpon>FrmBuscadorCategorias.cs</DependentUpon>
+    <Compile Include="Presentacion\Common\BuscadorCategorias.Designer.cs">
+      <DependentUpon>BuscadorCategorias.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\Common\FrmEditarCategoria.cs">
+    <Compile Include="Presentacion\Common\EditarCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\Common\FrmEditarCategoria.Designer.cs">
-      <DependentUpon>FrmEditarCategoria.cs</DependentUpon>
+    <Compile Include="Presentacion\Common\EditarCategoria.Designer.cs">
+      <DependentUpon>EditarCategoria.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\Principal\Login.cs">
       <SubType>Form</SubType>
@@ -202,36 +202,49 @@
     <Compile Include="Presentacion\Principal\Principal.Designer.cs">
       <DependentUpon>Principal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\Sales\FrmBuscadorClientes.cs">
+    <Compile Include="Presentacion\Sales\BuscadorClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\Sales\FrmBuscadorClientes.Designer.cs">
-      <DependentUpon>FrmBuscadorClientes.cs</DependentUpon>
+    <Compile Include="Presentacion\Sales\BuscadorClientes.Designer.cs">
+      <DependentUpon>BuscadorClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Sales\EditorCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Sales\EditorCliente.Designer.cs">
+      <DependentUpon>EditorCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Servicios\Base\IServicioBase.cs" />
     <Compile Include="Servicios\Base\Sesion.cs" />
     <Compile Include="Servicios\Common\CategoriasService.cs" />
+    <Compile Include="Servicios\Common\UbicacionService.cs" />
     <Compile Include="Servicios\DaoFactory.cs" />
     <Compile Include="Servicios\Identity\UsuarioService.cs" />
     <Compile Include="Servicios\Interfaces\IObservador.cs" />
     <Compile Include="Servicios\Interfaces\ISujeto.cs" />
+    <Compile Include="Servicios\Sales\ClienteService.cs" />
     <Compile Include="ViewModels\Common\CategoriaView.cs" />
-    <EmbeddedResource Include="Presentacion\Base\FrmBuscador.resx">
-      <DependentUpon>FrmBuscador.cs</DependentUpon>
+    <Compile Include="ViewModels\Common\MunicipioView.cs" />
+    <Compile Include="ViewModels\Sales\ClienteView.cs" />
+    <EmbeddedResource Include="Presentacion\Base\Buscador.resx">
+      <DependentUpon>Buscador.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\Common\FrmBuscadorCategorias.resx">
-      <DependentUpon>FrmBuscadorCategorias.cs</DependentUpon>
+    <EmbeddedResource Include="Presentacion\Common\BuscadorCategorias.resx">
+      <DependentUpon>BuscadorCategorias.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\Common\FrmEditarCategoria.resx">
-      <DependentUpon>FrmEditarCategoria.cs</DependentUpon>
+    <EmbeddedResource Include="Presentacion\Common\EditarCategoria.resx">
+      <DependentUpon>EditarCategoria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Principal\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Principal\Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Sales\EditorCliente.resx">
+      <DependentUpon>EditorCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -291,7 +304,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ViewModels\Identity\" />
-    <Folder Include="ViewModels\Sales\" />
     <Folder Include="ViewModels\Shop\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

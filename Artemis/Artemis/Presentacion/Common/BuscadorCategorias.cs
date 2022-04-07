@@ -7,7 +7,7 @@ using Artemis.ViewModels.Common;
 
 namespace Artemis.Presentacion.Common
 {
-    public partial class FrmBuscadorCategorias : Form, IObservador
+    public partial class BuscadorCategorias : Form, IObservador
     {
         #region Private Fields
 
@@ -23,7 +23,7 @@ namespace Artemis.Presentacion.Common
 
         #endregion
 
-        public FrmBuscadorCategorias()
+        public BuscadorCategorias()
         {
             InitializeComponent();
             Service = new CategoriasService();
@@ -65,7 +65,7 @@ namespace Artemis.Presentacion.Common
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
-            FrmEditarCategoria editarCategoria = new FrmEditarCategoria(null);
+            EditarCategoria editarCategoria = new EditarCategoria(null);
             editarCategoria.AgregarObservador(this);
             editarCategoria.ShowDialog();
         }
@@ -84,7 +84,7 @@ namespace Artemis.Presentacion.Common
 
             if (categoria is null || categoria.Equals(default)) return;
 
-            FrmEditarCategoria editarCategoria = new FrmEditarCategoria(categoria);
+            EditarCategoria editarCategoria = new EditarCategoria(categoria);
             editarCategoria.AgregarObservador(this);
             editarCategoria.ShowDialog();
         }

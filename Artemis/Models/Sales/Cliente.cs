@@ -1,4 +1,5 @@
-﻿using Models.Interfaces;
+﻿using System;
+using Models.Interfaces;
 
 namespace Models.Sales
 {
@@ -21,6 +22,11 @@ namespace Models.Sales
 
         /// <inheritdoc cref="IPerson.SegundoApellido"/>
         public string SegundoApellido { get; set; }
+
+        /// <summary>
+        /// Fecha de nacimiento del cliente.
+        /// </summary>
+        public DateTime FechaNacimiento { get; set; }
 
         /// <inheritdoc cref="IPerson.Correo"/>
         public string Correo { get; set; }

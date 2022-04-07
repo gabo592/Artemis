@@ -30,7 +30,7 @@ namespace Connection.Interfaces.Common
         /// en base al ID del Departamento proporcionado.
         /// </summary>
         /// <param name="idDepartamento">Identificador único del departamento.</param>
-        /// <returns>Colección de objetos de tipo Departamento que coincidan con el parámetro de búsqueda.</returns>
+        /// <returns>Colección de objetos de tipo Municipio que coincidan con el parámetro de búsqueda.</returns>
         IEnumerable<Municipio> GetByIdDepartamento(int idDepartamento);
     }
 }

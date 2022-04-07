@@ -18,7 +18,6 @@ namespace Artemis.Presentacion.Principal
         public Principal()
         {
             InitializeComponent();
-            pnlSideBar.Visible = false;
         }
 
         private void Principal_FormClosing(object sender, FormClosingEventArgs e)
@@ -52,22 +51,14 @@ namespace Artemis.Presentacion.Principal
             ChildForm.Show();
         }
 
-        private void PbMenu_Click(object sender, EventArgs e)
-        {
-            if (!pnlSideBar.Visible)
-            {
-                sideBarTransition.Show(pnlSideBar);
-                pnlSideBar.Visible = true;
-            }
-            else
-            {
-                pnlSideBar.Visible = false;
-            }
-        }
-
         private void BtnCategorias_Click(object sender, EventArgs e)
         {
-            AddForm(new Common.FrmBuscadorCategorias());
+            AddForm(new Common.BuscadorCategorias());
+        }
+
+        private void BtnClientes_Click(object sender, EventArgs e)
+        {
+            AddForm(new Sales.BuscadorClientes());
         }
     }
 }

@@ -88,6 +88,15 @@ namespace Common.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a No se reconoce el correo electrónico ingresado..
+        /// </summary>
+        internal static string CORREO_INCORRECTO {
+            get {
+                return ResourceManager.GetString("CORREO_INCORRECTO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a La cantidad de caracteres del Correo excede la permitida..
         /// </summary>
         internal static string CORREO_LONGITUD_EXCEDIDA {

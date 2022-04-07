@@ -64,6 +64,8 @@ namespace Artemis.Servicios.Common
         /// <inheritdoc cref="ICategoriaDao.Read(string)"/>
         public IEnumerable<CategoriaView> GetCategorias(string name)
         {
+            if (string.IsNullOrWhiteSpace(name)) name = null;
+
             IEnumerable<Categoria> categorias = CategoriaDao.Read(name);
 
             return categorias.Select(categoria =>
@@ -148,6 +150,8 @@ namespace Artemis.Servicios.Common
             if (result is null || result.Equals(default)) Handler.Add("CATEGORIA_DEFAULT");
         }
 
+        #region IServicioBase Members
+
         /// <inheritdoc cref="IDisposable.Dispose"/>
         public void Dispose()
         {
@@ -159,5 +163,7 @@ namespace Artemis.Servicios.Common
 
         /// <inheritdoc cref="IServicioBase.HasError"/>
         public bool HasError() => Handler.HasError();
+
+        #endregion
     }
 }
