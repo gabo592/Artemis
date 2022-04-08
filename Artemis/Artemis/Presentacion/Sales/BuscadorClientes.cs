@@ -73,6 +73,10 @@ namespace Artemis.Presentacion.Sales
                 return;
             }
 
+            DialogResult result = MessageBox.Show(this, $"¿Desea eliminar el registro con ID {clienteView.Id}?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.No) return;
+
             try
             {
                 Service.Delete(clienteView.Id);
