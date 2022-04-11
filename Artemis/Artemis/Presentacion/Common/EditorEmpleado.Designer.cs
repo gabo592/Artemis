@@ -1,6 +1,6 @@
-﻿namespace Artemis.Presentacion.Sales
+﻿namespace Artemis.Presentacion.Common
 {
-    partial class EditorCliente
+    partial class EditorEmpleado
     {
         /// <summary>
         /// Required designer variable.
@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditorCliente));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditorEmpleado));
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -57,37 +57,38 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties22 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties23 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties24 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            this.formBorderStyle = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.lblTitulo = new System.Windows.Forms.Label();
             this.pnlBotones = new System.Windows.Forms.FlowLayoutPanel();
             this.btnGuardar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnLimpiar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnCancelar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.pnlPrincipal = new System.Windows.Forms.Panel();
-            this.pnlUbicacionCliente = new System.Windows.Forms.TableLayoutPanel();
+            this.pnlUbicacion = new System.Windows.Forms.TableLayoutPanel();
             this.cmbDepartamentos = new System.Windows.Forms.ComboBox();
             this.cmbMunicipios = new System.Windows.Forms.ComboBox();
-            this.lblUbicacionCliente = new System.Windows.Forms.Label();
-            this.pnlContactoCliente = new System.Windows.Forms.TableLayoutPanel();
+            this.lblUbicacion = new System.Windows.Forms.Label();
+            this.pnlDatosOpcionales = new System.Windows.Forms.TableLayoutPanel();
             this.txtCorreo = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.txtTeléfono = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.lblContactoCliente = new System.Windows.Forms.Label();
-            this.pnlEdadCliente = new System.Windows.Forms.TableLayoutPanel();
-            this.dtNacimiento = new System.Windows.Forms.DateTimePicker();
-            this.lblEdadCliente = new System.Windows.Forms.Label();
-            this.pnlIdenficacionCliente = new System.Windows.Forms.TableLayoutPanel();
+            this.txtCedula = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.lblDatosOpcionales = new System.Windows.Forms.Label();
+            this.pnlInformacion = new System.Windows.Forms.TableLayoutPanel();
             this.txtPrimerNombre = new Bunifu.UI.WinForms.BunifuTextBox();
             this.txtSegundoNombre = new Bunifu.UI.WinForms.BunifuTextBox();
             this.txtPrimerApellido = new Bunifu.UI.WinForms.BunifuTextBox();
             this.txtSegundoApellido = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.lblIdentificacionCliente = new System.Windows.Forms.Label();
-            this.formBorderStyle = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.lblIdentificacion = new System.Windows.Forms.Label();
             this.pnlBotones.SuspendLayout();
             this.pnlPrincipal.SuspendLayout();
-            this.pnlUbicacionCliente.SuspendLayout();
-            this.pnlContactoCliente.SuspendLayout();
-            this.pnlEdadCliente.SuspendLayout();
-            this.pnlIdenficacionCliente.SuspendLayout();
+            this.pnlUbicacion.SuspendLayout();
+            this.pnlDatosOpcionales.SuspendLayout();
+            this.pnlInformacion.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // formBorderStyle
+            // 
+            this.formBorderStyle.ElipseRadius = 15;
+            this.formBorderStyle.TargetControl = this;
             // 
             // lblTitulo
             // 
@@ -95,9 +96,9 @@
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.Location = new System.Drawing.Point(0, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(832, 45);
+            this.lblTitulo.Size = new System.Drawing.Size(776, 44);
             this.lblTitulo.TabIndex = 0;
-            this.lblTitulo.Text = "Editar Cliente";
+            this.lblTitulo.Text = "Editar Empleado";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pnlBotones
@@ -107,9 +108,9 @@
             this.pnlBotones.Controls.Add(this.btnCancelar);
             this.pnlBotones.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlBotones.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.pnlBotones.Location = new System.Drawing.Point(0, 396);
+            this.pnlBotones.Location = new System.Drawing.Point(0, 391);
             this.pnlBotones.Name = "pnlBotones";
-            this.pnlBotones.Size = new System.Drawing.Size(832, 49);
+            this.pnlBotones.Size = new System.Drawing.Size(776, 51);
             this.pnlBotones.TabIndex = 1;
             // 
             // btnGuardar
@@ -141,7 +142,7 @@
             this.btnGuardar.DisabledFillColor = System.Drawing.Color.Empty;
             this.btnGuardar.DisabledForecolor = System.Drawing.Color.Empty;
             this.btnGuardar.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
             this.btnGuardar.IconLeft = null;
             this.btnGuardar.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -161,7 +162,7 @@
             this.btnGuardar.IdleIconLeftImage = null;
             this.btnGuardar.IdleIconRightImage = null;
             this.btnGuardar.IndicateFocus = false;
-            this.btnGuardar.Location = new System.Drawing.Point(705, 3);
+            this.btnGuardar.Location = new System.Drawing.Point(623, 3);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnGuardar.OnDisabledState.BorderRadius = 15;
@@ -195,7 +196,7 @@
             this.btnGuardar.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnGuardar.OnPressedState.IconLeftImage = null;
             this.btnGuardar.OnPressedState.IconRightImage = null;
-            this.btnGuardar.Size = new System.Drawing.Size(124, 39);
+            this.btnGuardar.Size = new System.Drawing.Size(150, 39);
             this.btnGuardar.TabIndex = 0;
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnGuardar.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -233,7 +234,7 @@
             this.btnLimpiar.DisabledFillColor = System.Drawing.Color.Empty;
             this.btnLimpiar.DisabledForecolor = System.Drawing.Color.Empty;
             this.btnLimpiar.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiar.ForeColor = System.Drawing.Color.Black;
             this.btnLimpiar.IconLeft = null;
             this.btnLimpiar.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -253,7 +254,7 @@
             this.btnLimpiar.IdleIconLeftImage = null;
             this.btnLimpiar.IdleIconRightImage = null;
             this.btnLimpiar.IndicateFocus = false;
-            this.btnLimpiar.Location = new System.Drawing.Point(585, 3);
+            this.btnLimpiar.Location = new System.Drawing.Point(467, 3);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnLimpiar.OnDisabledState.BorderRadius = 15;
@@ -287,7 +288,7 @@
             this.btnLimpiar.OnPressedState.ForeColor = System.Drawing.Color.Black;
             this.btnLimpiar.OnPressedState.IconLeftImage = null;
             this.btnLimpiar.OnPressedState.IconRightImage = null;
-            this.btnLimpiar.Size = new System.Drawing.Size(114, 39);
+            this.btnLimpiar.Size = new System.Drawing.Size(150, 39);
             this.btnLimpiar.TabIndex = 1;
             this.btnLimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnLimpiar.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -325,7 +326,7 @@
             this.btnCancelar.DisabledFillColor = System.Drawing.Color.Empty;
             this.btnCancelar.DisabledForecolor = System.Drawing.Color.Empty;
             this.btnCancelar.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.Black;
             this.btnCancelar.IconLeft = null;
             this.btnCancelar.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -345,7 +346,7 @@
             this.btnCancelar.IdleIconLeftImage = null;
             this.btnCancelar.IdleIconRightImage = null;
             this.btnCancelar.IndicateFocus = false;
-            this.btnCancelar.Location = new System.Drawing.Point(453, 3);
+            this.btnCancelar.Location = new System.Drawing.Point(311, 3);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnCancelar.OnDisabledState.BorderRadius = 15;
@@ -379,7 +380,7 @@
             this.btnCancelar.OnPressedState.ForeColor = System.Drawing.Color.Black;
             this.btnCancelar.OnPressedState.IconLeftImage = null;
             this.btnCancelar.OnPressedState.IconRightImage = null;
-            this.btnCancelar.Size = new System.Drawing.Size(126, 39);
+            this.btnCancelar.Size = new System.Drawing.Size(150, 39);
             this.btnCancelar.TabIndex = 2;
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnCancelar.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -391,48 +392,45 @@
             // pnlPrincipal
             // 
             this.pnlPrincipal.AutoScroll = true;
-            this.pnlPrincipal.Controls.Add(this.pnlUbicacionCliente);
-            this.pnlPrincipal.Controls.Add(this.lblUbicacionCliente);
-            this.pnlPrincipal.Controls.Add(this.pnlContactoCliente);
-            this.pnlPrincipal.Controls.Add(this.lblContactoCliente);
-            this.pnlPrincipal.Controls.Add(this.pnlEdadCliente);
-            this.pnlPrincipal.Controls.Add(this.lblEdadCliente);
-            this.pnlPrincipal.Controls.Add(this.pnlIdenficacionCliente);
-            this.pnlPrincipal.Controls.Add(this.lblIdentificacionCliente);
+            this.pnlPrincipal.Controls.Add(this.pnlUbicacion);
+            this.pnlPrincipal.Controls.Add(this.lblUbicacion);
+            this.pnlPrincipal.Controls.Add(this.pnlDatosOpcionales);
+            this.pnlPrincipal.Controls.Add(this.lblDatosOpcionales);
+            this.pnlPrincipal.Controls.Add(this.pnlInformacion);
+            this.pnlPrincipal.Controls.Add(this.lblIdentificacion);
             this.pnlPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlPrincipal.Location = new System.Drawing.Point(0, 45);
+            this.pnlPrincipal.Location = new System.Drawing.Point(0, 44);
             this.pnlPrincipal.Name = "pnlPrincipal";
-            this.pnlPrincipal.Size = new System.Drawing.Size(832, 351);
+            this.pnlPrincipal.Size = new System.Drawing.Size(776, 347);
             this.pnlPrincipal.TabIndex = 2;
             // 
-            // pnlUbicacionCliente
+            // pnlUbicacion
             // 
-            this.pnlUbicacionCliente.ColumnCount = 4;
-            this.pnlUbicacionCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.954802F));
-            this.pnlUbicacionCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 96.0452F));
-            this.pnlUbicacionCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 396F));
-            this.pnlUbicacionCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 18F));
-            this.pnlUbicacionCliente.Controls.Add(this.cmbDepartamentos, 1, 0);
-            this.pnlUbicacionCliente.Controls.Add(this.cmbMunicipios, 2, 0);
-            this.pnlUbicacionCliente.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlUbicacionCliente.Location = new System.Drawing.Point(0, 381);
-            this.pnlUbicacionCliente.Name = "pnlUbicacionCliente";
-            this.pnlUbicacionCliente.RowCount = 1;
-            this.pnlUbicacionCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.pnlUbicacionCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.pnlUbicacionCliente.Size = new System.Drawing.Size(815, 36);
-            this.pnlUbicacionCliente.TabIndex = 7;
+            this.pnlUbicacion.ColumnCount = 4;
+            this.pnlUbicacion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.100775F));
+            this.pnlUbicacion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 96.89922F));
+            this.pnlUbicacion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 374F));
+            this.pnlUbicacion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 17F));
+            this.pnlUbicacion.Controls.Add(this.cmbDepartamentos, 1, 0);
+            this.pnlUbicacion.Controls.Add(this.cmbMunicipios, 2, 0);
+            this.pnlUbicacion.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlUbicacion.Location = new System.Drawing.Point(0, 277);
+            this.pnlUbicacion.Name = "pnlUbicacion";
+            this.pnlUbicacion.RowCount = 1;
+            this.pnlUbicacion.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.pnlUbicacion.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.pnlUbicacion.Size = new System.Drawing.Size(776, 40);
+            this.pnlUbicacion.TabIndex = 5;
             // 
             // cmbDepartamentos
             // 
             this.cmbDepartamentos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cmbDepartamentos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDepartamentos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbDepartamentos.ForeColor = System.Drawing.Color.Black;
             this.cmbDepartamentos.FormattingEnabled = true;
-            this.cmbDepartamentos.Location = new System.Drawing.Point(18, 3);
+            this.cmbDepartamentos.Location = new System.Drawing.Point(14, 3);
             this.cmbDepartamentos.Name = "cmbDepartamentos";
-            this.cmbDepartamentos.Size = new System.Drawing.Size(379, 28);
+            this.cmbDepartamentos.Size = new System.Drawing.Size(367, 28);
             this.cmbDepartamentos.TabIndex = 0;
             this.cmbDepartamentos.SelectedIndexChanged += new System.EventHandler(this.CmbDepartamentos_SelectedIndexChanged);
             // 
@@ -442,40 +440,40 @@
             this.cmbMunicipios.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMunicipios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbMunicipios.FormattingEnabled = true;
-            this.cmbMunicipios.Location = new System.Drawing.Point(403, 3);
+            this.cmbMunicipios.Location = new System.Drawing.Point(387, 3);
             this.cmbMunicipios.Name = "cmbMunicipios";
-            this.cmbMunicipios.Size = new System.Drawing.Size(390, 28);
+            this.cmbMunicipios.Size = new System.Drawing.Size(368, 28);
             this.cmbMunicipios.TabIndex = 1;
             // 
-            // lblUbicacionCliente
+            // lblUbicacion
             // 
-            this.lblUbicacionCliente.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblUbicacionCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUbicacionCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(184)))), ((int)(((byte)(114)))));
-            this.lblUbicacionCliente.Location = new System.Drawing.Point(0, 330);
-            this.lblUbicacionCliente.Name = "lblUbicacionCliente";
-            this.lblUbicacionCliente.Size = new System.Drawing.Size(815, 51);
-            this.lblUbicacionCliente.TabIndex = 6;
-            this.lblUbicacionCliente.Text = "¿Dónde se encuentra?";
-            this.lblUbicacionCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblUbicacion.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblUbicacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUbicacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(184)))), ((int)(((byte)(114)))));
+            this.lblUbicacion.Location = new System.Drawing.Point(0, 234);
+            this.lblUbicacion.Name = "lblUbicacion";
+            this.lblUbicacion.Size = new System.Drawing.Size(776, 43);
+            this.lblUbicacion.TabIndex = 4;
+            this.lblUbicacion.Text = "¿Dónde se ubica?";
+            this.lblUbicacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // pnlContactoCliente
+            // pnlDatosOpcionales
             // 
-            this.pnlContactoCliente.ColumnCount = 4;
-            this.pnlContactoCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.605769F));
-            this.pnlContactoCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 96.39423F));
-            this.pnlContactoCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 394F));
-            this.pnlContactoCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.pnlContactoCliente.Controls.Add(this.txtCorreo, 1, 0);
-            this.pnlContactoCliente.Controls.Add(this.txtTeléfono, 2, 0);
-            this.pnlContactoCliente.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlContactoCliente.Location = new System.Drawing.Point(0, 282);
-            this.pnlContactoCliente.Name = "pnlContactoCliente";
-            this.pnlContactoCliente.RowCount = 1;
-            this.pnlContactoCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.pnlContactoCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.pnlContactoCliente.Size = new System.Drawing.Size(815, 48);
-            this.pnlContactoCliente.TabIndex = 5;
+            this.pnlDatosOpcionales.ColumnCount = 4;
+            this.pnlDatosOpcionales.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.608248F));
+            this.pnlDatosOpcionales.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 96.39175F));
+            this.pnlDatosOpcionales.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 373F));
+            this.pnlDatosOpcionales.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 15F));
+            this.pnlDatosOpcionales.Controls.Add(this.txtCorreo, 1, 0);
+            this.pnlDatosOpcionales.Controls.Add(this.txtCedula, 2, 0);
+            this.pnlDatosOpcionales.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlDatosOpcionales.Location = new System.Drawing.Point(0, 181);
+            this.pnlDatosOpcionales.Name = "pnlDatosOpcionales";
+            this.pnlDatosOpcionales.RowCount = 1;
+            this.pnlDatosOpcionales.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.pnlDatosOpcionales.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.pnlDatosOpcionales.Size = new System.Drawing.Size(776, 53);
+            this.pnlDatosOpcionales.TabIndex = 3;
             // 
             // txtCorreo
             // 
@@ -536,169 +534,132 @@
             this.txtCorreo.Padding = new System.Windows.Forms.Padding(3);
             this.txtCorreo.PasswordChar = '\0';
             this.txtCorreo.PlaceholderForeColor = System.Drawing.Color.Black;
-            this.txtCorreo.PlaceholderText = "Correo electrónico";
+            this.txtCorreo.PlaceholderText = "Correo";
             this.txtCorreo.ReadOnly = false;
             this.txtCorreo.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtCorreo.SelectedText = "";
             this.txtCorreo.SelectionLength = 0;
             this.txtCorreo.SelectionStart = 0;
             this.txtCorreo.ShortcutsEnabled = true;
-            this.txtCorreo.Size = new System.Drawing.Size(380, 42);
+            this.txtCorreo.Size = new System.Drawing.Size(368, 47);
             this.txtCorreo.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtCorreo.TabIndex = 0;
             this.txtCorreo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtCorreo.TextMarginBottom = 0;
             this.txtCorreo.TextMarginLeft = 3;
             this.txtCorreo.TextMarginTop = 1;
-            this.txtCorreo.TextPlaceholder = "Correo electrónico";
+            this.txtCorreo.TextPlaceholder = "Correo";
             this.txtCorreo.UseSystemPasswordChar = false;
             this.txtCorreo.WordWrap = true;
             // 
-            // txtTeléfono
+            // txtCedula
             // 
-            this.txtTeléfono.AcceptsReturn = false;
-            this.txtTeléfono.AcceptsTab = false;
-            this.txtTeléfono.AnimationSpeed = 200;
-            this.txtTeléfono.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.txtTeléfono.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.txtTeléfono.AutoSizeHeight = true;
-            this.txtTeléfono.BackColor = System.Drawing.Color.Transparent;
-            this.txtTeléfono.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtTeléfono.BackgroundImage")));
-            this.txtTeléfono.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(184)))), ((int)(((byte)(114)))));
-            this.txtTeléfono.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.txtTeléfono.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(184)))), ((int)(((byte)(114)))));
-            this.txtTeléfono.BorderColorIdle = System.Drawing.Color.White;
-            this.txtTeléfono.BorderRadius = 15;
-            this.txtTeléfono.BorderThickness = 1;
-            this.txtTeléfono.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txtTeléfono.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTeléfono.DefaultFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTeléfono.DefaultText = "";
-            this.txtTeléfono.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtTeléfono.FillColor = System.Drawing.Color.White;
-            this.txtTeléfono.ForeColor = System.Drawing.Color.Black;
-            this.txtTeléfono.HideSelection = true;
-            this.txtTeléfono.IconLeft = null;
-            this.txtTeléfono.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTeléfono.IconPadding = 10;
-            this.txtTeléfono.IconRight = null;
-            this.txtTeléfono.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTeléfono.Lines = new string[0];
-            this.txtTeléfono.Location = new System.Drawing.Point(403, 3);
-            this.txtTeléfono.MaxLength = 32767;
-            this.txtTeléfono.MinimumSize = new System.Drawing.Size(1, 1);
-            this.txtTeléfono.Modified = false;
-            this.txtTeléfono.Multiline = false;
-            this.txtTeléfono.Name = "txtTeléfono";
+            this.txtCedula.AcceptsReturn = false;
+            this.txtCedula.AcceptsTab = false;
+            this.txtCedula.AnimationSpeed = 200;
+            this.txtCedula.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txtCedula.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txtCedula.AutoSizeHeight = true;
+            this.txtCedula.BackColor = System.Drawing.Color.Transparent;
+            this.txtCedula.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtCedula.BackgroundImage")));
+            this.txtCedula.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.txtCedula.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.txtCedula.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.txtCedula.BorderColorIdle = System.Drawing.Color.White;
+            this.txtCedula.BorderRadius = 15;
+            this.txtCedula.BorderThickness = 1;
+            this.txtCedula.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtCedula.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCedula.DefaultFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCedula.DefaultText = "";
+            this.txtCedula.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtCedula.FillColor = System.Drawing.Color.White;
+            this.txtCedula.ForeColor = System.Drawing.Color.Black;
+            this.txtCedula.HideSelection = true;
+            this.txtCedula.IconLeft = null;
+            this.txtCedula.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCedula.IconPadding = 10;
+            this.txtCedula.IconRight = null;
+            this.txtCedula.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCedula.Lines = new string[0];
+            this.txtCedula.Location = new System.Drawing.Point(391, 3);
+            this.txtCedula.MaxLength = 32767;
+            this.txtCedula.MinimumSize = new System.Drawing.Size(1, 1);
+            this.txtCedula.Modified = false;
+            this.txtCedula.Multiline = false;
+            this.txtCedula.Name = "txtCedula";
             stateProperties5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(184)))), ((int)(((byte)(114)))));
             stateProperties5.FillColor = System.Drawing.Color.White;
             stateProperties5.ForeColor = System.Drawing.Color.Black;
             stateProperties5.PlaceholderForeColor = System.Drawing.Color.Black;
-            this.txtTeléfono.OnActiveState = stateProperties5;
+            this.txtCedula.OnActiveState = stateProperties5;
             stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             stateProperties6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             stateProperties6.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtTeléfono.OnDisabledState = stateProperties6;
+            this.txtCedula.OnDisabledState = stateProperties6;
             stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(184)))), ((int)(((byte)(114)))));
             stateProperties7.FillColor = System.Drawing.Color.White;
             stateProperties7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(184)))), ((int)(((byte)(114)))));
             stateProperties7.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(184)))), ((int)(((byte)(114)))));
-            this.txtTeléfono.OnHoverState = stateProperties7;
+            this.txtCedula.OnHoverState = stateProperties7;
             stateProperties8.BorderColor = System.Drawing.Color.White;
             stateProperties8.FillColor = System.Drawing.Color.White;
             stateProperties8.ForeColor = System.Drawing.Color.Black;
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Black;
-            this.txtTeléfono.OnIdleState = stateProperties8;
-            this.txtTeléfono.Padding = new System.Windows.Forms.Padding(3);
-            this.txtTeléfono.PasswordChar = '\0';
-            this.txtTeléfono.PlaceholderForeColor = System.Drawing.Color.Black;
-            this.txtTeléfono.PlaceholderText = "Teléfono";
-            this.txtTeléfono.ReadOnly = false;
-            this.txtTeléfono.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtTeléfono.SelectedText = "";
-            this.txtTeléfono.SelectionLength = 0;
-            this.txtTeléfono.SelectionStart = 0;
-            this.txtTeléfono.ShortcutsEnabled = true;
-            this.txtTeléfono.Size = new System.Drawing.Size(388, 42);
-            this.txtTeléfono.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtTeléfono.TabIndex = 1;
-            this.txtTeléfono.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtTeléfono.TextMarginBottom = 0;
-            this.txtTeléfono.TextMarginLeft = 3;
-            this.txtTeléfono.TextMarginTop = 1;
-            this.txtTeléfono.TextPlaceholder = "Teléfono";
-            this.txtTeléfono.UseSystemPasswordChar = false;
-            this.txtTeléfono.WordWrap = true;
+            this.txtCedula.OnIdleState = stateProperties8;
+            this.txtCedula.Padding = new System.Windows.Forms.Padding(3);
+            this.txtCedula.PasswordChar = '\0';
+            this.txtCedula.PlaceholderForeColor = System.Drawing.Color.Black;
+            this.txtCedula.PlaceholderText = "Cédula";
+            this.txtCedula.ReadOnly = false;
+            this.txtCedula.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtCedula.SelectedText = "";
+            this.txtCedula.SelectionLength = 0;
+            this.txtCedula.SelectionStart = 0;
+            this.txtCedula.ShortcutsEnabled = true;
+            this.txtCedula.Size = new System.Drawing.Size(367, 47);
+            this.txtCedula.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            this.txtCedula.TabIndex = 1;
+            this.txtCedula.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtCedula.TextMarginBottom = 0;
+            this.txtCedula.TextMarginLeft = 3;
+            this.txtCedula.TextMarginTop = 1;
+            this.txtCedula.TextPlaceholder = "Cédula";
+            this.txtCedula.UseSystemPasswordChar = false;
+            this.txtCedula.WordWrap = true;
             // 
-            // lblContactoCliente
+            // lblDatosOpcionales
             // 
-            this.lblContactoCliente.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblContactoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContactoCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(184)))), ((int)(((byte)(114)))));
-            this.lblContactoCliente.Location = new System.Drawing.Point(0, 234);
-            this.lblContactoCliente.Name = "lblContactoCliente";
-            this.lblContactoCliente.Size = new System.Drawing.Size(815, 48);
-            this.lblContactoCliente.TabIndex = 4;
-            this.lblContactoCliente.Text = "Mantengamos contacto (opcional)";
-            this.lblContactoCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblDatosOpcionales.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblDatosOpcionales.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDatosOpcionales.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(184)))), ((int)(((byte)(114)))));
+            this.lblDatosOpcionales.Location = new System.Drawing.Point(0, 138);
+            this.lblDatosOpcionales.Name = "lblDatosOpcionales";
+            this.lblDatosOpcionales.Size = new System.Drawing.Size(776, 43);
+            this.lblDatosOpcionales.TabIndex = 2;
+            this.lblDatosOpcionales.Text = "Otros datos opcionales";
+            this.lblDatosOpcionales.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // pnlEdadCliente
+            // pnlInformacion
             // 
-            this.pnlEdadCliente.ColumnCount = 3;
-            this.pnlEdadCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 1.835985F));
-            this.pnlEdadCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 98.16402F));
-            this.pnlEdadCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 21F));
-            this.pnlEdadCliente.Controls.Add(this.dtNacimiento, 1, 0);
-            this.pnlEdadCliente.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlEdadCliente.Location = new System.Drawing.Point(0, 199);
-            this.pnlEdadCliente.Name = "pnlEdadCliente";
-            this.pnlEdadCliente.RowCount = 1;
-            this.pnlEdadCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.pnlEdadCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.pnlEdadCliente.Size = new System.Drawing.Size(815, 35);
-            this.pnlEdadCliente.TabIndex = 3;
-            // 
-            // dtNacimiento
-            // 
-            this.dtNacimiento.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtNacimiento.Location = new System.Drawing.Point(17, 3);
-            this.dtNacimiento.Name = "dtNacimiento";
-            this.dtNacimiento.Size = new System.Drawing.Size(773, 26);
-            this.dtNacimiento.TabIndex = 0;
-            // 
-            // lblEdadCliente
-            // 
-            this.lblEdadCliente.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblEdadCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEdadCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(184)))), ((int)(((byte)(114)))));
-            this.lblEdadCliente.Location = new System.Drawing.Point(0, 144);
-            this.lblEdadCliente.Name = "lblEdadCliente";
-            this.lblEdadCliente.Size = new System.Drawing.Size(815, 55);
-            this.lblEdadCliente.TabIndex = 2;
-            this.lblEdadCliente.Text = "Ayúdanos a conocer la edad (opcional)";
-            this.lblEdadCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // pnlIdenficacionCliente
-            // 
-            this.pnlIdenficacionCliente.ColumnCount = 4;
-            this.pnlIdenficacionCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.478261F));
-            this.pnlIdenficacionCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 96.52174F));
-            this.pnlIdenficacionCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 393F));
-            this.pnlIdenficacionCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 21F));
-            this.pnlIdenficacionCliente.Controls.Add(this.txtPrimerNombre, 1, 0);
-            this.pnlIdenficacionCliente.Controls.Add(this.txtSegundoNombre, 2, 0);
-            this.pnlIdenficacionCliente.Controls.Add(this.txtPrimerApellido, 1, 1);
-            this.pnlIdenficacionCliente.Controls.Add(this.txtSegundoApellido, 2, 1);
-            this.pnlIdenficacionCliente.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlIdenficacionCliente.Location = new System.Drawing.Point(0, 46);
-            this.pnlIdenficacionCliente.Name = "pnlIdenficacionCliente";
-            this.pnlIdenficacionCliente.RowCount = 2;
-            this.pnlIdenficacionCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.pnlIdenficacionCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.pnlIdenficacionCliente.Size = new System.Drawing.Size(815, 98);
-            this.pnlIdenficacionCliente.TabIndex = 1;
+            this.pnlInformacion.ColumnCount = 4;
+            this.pnlInformacion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.608248F));
+            this.pnlInformacion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 96.39175F));
+            this.pnlInformacion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 373F));
+            this.pnlInformacion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 15F));
+            this.pnlInformacion.Controls.Add(this.txtPrimerNombre, 1, 0);
+            this.pnlInformacion.Controls.Add(this.txtSegundoNombre, 2, 0);
+            this.pnlInformacion.Controls.Add(this.txtPrimerApellido, 1, 1);
+            this.pnlInformacion.Controls.Add(this.txtSegundoApellido, 2, 1);
+            this.pnlInformacion.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlInformacion.Location = new System.Drawing.Point(0, 38);
+            this.pnlInformacion.Name = "pnlInformacion";
+            this.pnlInformacion.RowCount = 2;
+            this.pnlInformacion.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.pnlInformacion.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.pnlInformacion.Size = new System.Drawing.Size(776, 100);
+            this.pnlInformacion.TabIndex = 1;
             // 
             // txtPrimerNombre
             // 
@@ -730,7 +691,7 @@
             this.txtPrimerNombre.IconRight = null;
             this.txtPrimerNombre.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPrimerNombre.Lines = new string[0];
-            this.txtPrimerNombre.Location = new System.Drawing.Point(16, 3);
+            this.txtPrimerNombre.Location = new System.Drawing.Point(17, 3);
             this.txtPrimerNombre.MaxLength = 32767;
             this.txtPrimerNombre.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtPrimerNombre.Modified = false;
@@ -759,21 +720,21 @@
             this.txtPrimerNombre.Padding = new System.Windows.Forms.Padding(3);
             this.txtPrimerNombre.PasswordChar = '\0';
             this.txtPrimerNombre.PlaceholderForeColor = System.Drawing.Color.Black;
-            this.txtPrimerNombre.PlaceholderText = "Primer Nombre (requerido)";
+            this.txtPrimerNombre.PlaceholderText = "Primer Nombre";
             this.txtPrimerNombre.ReadOnly = false;
             this.txtPrimerNombre.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtPrimerNombre.SelectedText = "";
             this.txtPrimerNombre.SelectionLength = 0;
             this.txtPrimerNombre.SelectionStart = 0;
             this.txtPrimerNombre.ShortcutsEnabled = true;
-            this.txtPrimerNombre.Size = new System.Drawing.Size(381, 43);
+            this.txtPrimerNombre.Size = new System.Drawing.Size(368, 44);
             this.txtPrimerNombre.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtPrimerNombre.TabIndex = 0;
             this.txtPrimerNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtPrimerNombre.TextMarginBottom = 0;
             this.txtPrimerNombre.TextMarginLeft = 3;
             this.txtPrimerNombre.TextMarginTop = 1;
-            this.txtPrimerNombre.TextPlaceholder = "Primer Nombre (requerido)";
+            this.txtPrimerNombre.TextPlaceholder = "Primer Nombre";
             this.txtPrimerNombre.UseSystemPasswordChar = false;
             this.txtPrimerNombre.WordWrap = true;
             // 
@@ -807,7 +768,7 @@
             this.txtSegundoNombre.IconRight = null;
             this.txtSegundoNombre.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSegundoNombre.Lines = new string[0];
-            this.txtSegundoNombre.Location = new System.Drawing.Point(403, 3);
+            this.txtSegundoNombre.Location = new System.Drawing.Point(391, 3);
             this.txtSegundoNombre.MaxLength = 32767;
             this.txtSegundoNombre.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtSegundoNombre.Modified = false;
@@ -843,7 +804,7 @@
             this.txtSegundoNombre.SelectionLength = 0;
             this.txtSegundoNombre.SelectionStart = 0;
             this.txtSegundoNombre.ShortcutsEnabled = true;
-            this.txtSegundoNombre.Size = new System.Drawing.Size(387, 43);
+            this.txtSegundoNombre.Size = new System.Drawing.Size(367, 44);
             this.txtSegundoNombre.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtSegundoNombre.TabIndex = 1;
             this.txtSegundoNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -884,7 +845,7 @@
             this.txtPrimerApellido.IconRight = null;
             this.txtPrimerApellido.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPrimerApellido.Lines = new string[0];
-            this.txtPrimerApellido.Location = new System.Drawing.Point(16, 52);
+            this.txtPrimerApellido.Location = new System.Drawing.Point(17, 53);
             this.txtPrimerApellido.MaxLength = 32767;
             this.txtPrimerApellido.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtPrimerApellido.Modified = false;
@@ -913,21 +874,21 @@
             this.txtPrimerApellido.Padding = new System.Windows.Forms.Padding(3);
             this.txtPrimerApellido.PasswordChar = '\0';
             this.txtPrimerApellido.PlaceholderForeColor = System.Drawing.Color.Black;
-            this.txtPrimerApellido.PlaceholderText = "Primer Apellido (requerido)";
+            this.txtPrimerApellido.PlaceholderText = "Primer Apellido";
             this.txtPrimerApellido.ReadOnly = false;
             this.txtPrimerApellido.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtPrimerApellido.SelectedText = "";
             this.txtPrimerApellido.SelectionLength = 0;
             this.txtPrimerApellido.SelectionStart = 0;
             this.txtPrimerApellido.ShortcutsEnabled = true;
-            this.txtPrimerApellido.Size = new System.Drawing.Size(381, 43);
+            this.txtPrimerApellido.Size = new System.Drawing.Size(368, 44);
             this.txtPrimerApellido.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtPrimerApellido.TabIndex = 2;
             this.txtPrimerApellido.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtPrimerApellido.TextMarginBottom = 0;
             this.txtPrimerApellido.TextMarginLeft = 3;
             this.txtPrimerApellido.TextMarginTop = 1;
-            this.txtPrimerApellido.TextPlaceholder = "Primer Apellido (requerido)";
+            this.txtPrimerApellido.TextPlaceholder = "Primer Apellido";
             this.txtPrimerApellido.UseSystemPasswordChar = false;
             this.txtPrimerApellido.WordWrap = true;
             // 
@@ -961,7 +922,7 @@
             this.txtSegundoApellido.IconRight = null;
             this.txtSegundoApellido.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSegundoApellido.Lines = new string[0];
-            this.txtSegundoApellido.Location = new System.Drawing.Point(403, 52);
+            this.txtSegundoApellido.Location = new System.Drawing.Point(391, 53);
             this.txtSegundoApellido.MaxLength = 32767;
             this.txtSegundoApellido.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtSegundoApellido.Modified = false;
@@ -997,7 +958,7 @@
             this.txtSegundoApellido.SelectionLength = 0;
             this.txtSegundoApellido.SelectionStart = 0;
             this.txtSegundoApellido.ShortcutsEnabled = true;
-            this.txtSegundoApellido.Size = new System.Drawing.Size(387, 43);
+            this.txtSegundoApellido.Size = new System.Drawing.Size(367, 44);
             this.txtSegundoApellido.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtSegundoApellido.TabIndex = 3;
             this.txtSegundoApellido.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1008,72 +969,63 @@
             this.txtSegundoApellido.UseSystemPasswordChar = false;
             this.txtSegundoApellido.WordWrap = true;
             // 
-            // lblIdentificacionCliente
+            // lblIdentificacion
             // 
-            this.lblIdentificacionCliente.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblIdentificacionCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdentificacionCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(184)))), ((int)(((byte)(114)))));
-            this.lblIdentificacionCliente.Location = new System.Drawing.Point(0, 0);
-            this.lblIdentificacionCliente.Name = "lblIdentificacionCliente";
-            this.lblIdentificacionCliente.Size = new System.Drawing.Size(815, 46);
-            this.lblIdentificacionCliente.TabIndex = 0;
-            this.lblIdentificacionCliente.Text = "¿Cómo se identifica?";
-            this.lblIdentificacionCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblIdentificacion.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblIdentificacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIdentificacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(184)))), ((int)(((byte)(114)))));
+            this.lblIdentificacion.Location = new System.Drawing.Point(0, 0);
+            this.lblIdentificacion.Name = "lblIdentificacion";
+            this.lblIdentificacion.Size = new System.Drawing.Size(776, 38);
+            this.lblIdentificacion.TabIndex = 0;
+            this.lblIdentificacion.Text = "¿Cómo lo identificamos?";
+            this.lblIdentificacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // formBorderStyle
-            // 
-            this.formBorderStyle.ElipseRadius = 15;
-            this.formBorderStyle.TargetControl = this;
-            // 
-            // EditorCliente
+            // EditorEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(832, 445);
+            this.ClientSize = new System.Drawing.Size(776, 442);
             this.Controls.Add(this.pnlPrincipal);
             this.Controls.Add(this.pnlBotones);
             this.Controls.Add(this.lblTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "EditorCliente";
+            this.Name = "EditorEmpleado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Editor Cliente";
+            this.Text = "Editor Empleado";
             this.pnlBotones.ResumeLayout(false);
             this.pnlPrincipal.ResumeLayout(false);
-            this.pnlUbicacionCliente.ResumeLayout(false);
-            this.pnlContactoCliente.ResumeLayout(false);
-            this.pnlEdadCliente.ResumeLayout(false);
-            this.pnlIdenficacionCliente.ResumeLayout(false);
+            this.pnlUbicacion.ResumeLayout(false);
+            this.pnlDatosOpcionales.ResumeLayout(false);
+            this.pnlInformacion.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label lblTitulo;
-        private System.Windows.Forms.FlowLayoutPanel pnlBotones;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnGuardar;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnLimpiar;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnCancelar;
-        private System.Windows.Forms.Panel pnlPrincipal;
         private Bunifu.Framework.UI.BunifuElipse formBorderStyle;
-        private System.Windows.Forms.TableLayoutPanel pnlIdenficacionCliente;
+        private System.Windows.Forms.Panel pnlPrincipal;
+        private System.Windows.Forms.FlowLayoutPanel pnlBotones;
+        private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.TableLayoutPanel pnlInformacion;
+        private System.Windows.Forms.Label lblIdentificacion;
+        private System.Windows.Forms.Label lblDatosOpcionales;
         private Bunifu.UI.WinForms.BunifuTextBox txtPrimerNombre;
         private Bunifu.UI.WinForms.BunifuTextBox txtSegundoNombre;
         private Bunifu.UI.WinForms.BunifuTextBox txtPrimerApellido;
         private Bunifu.UI.WinForms.BunifuTextBox txtSegundoApellido;
-        private System.Windows.Forms.Label lblIdentificacionCliente;
-        private System.Windows.Forms.TableLayoutPanel pnlEdadCliente;
-        private System.Windows.Forms.DateTimePicker dtNacimiento;
-        private System.Windows.Forms.Label lblEdadCliente;
-        private System.Windows.Forms.TableLayoutPanel pnlContactoCliente;
-        private System.Windows.Forms.Label lblContactoCliente;
+        private System.Windows.Forms.TableLayoutPanel pnlDatosOpcionales;
         private Bunifu.UI.WinForms.BunifuTextBox txtCorreo;
-        private Bunifu.UI.WinForms.BunifuTextBox txtTeléfono;
-        private System.Windows.Forms.TableLayoutPanel pnlUbicacionCliente;
+        private Bunifu.UI.WinForms.BunifuTextBox txtCedula;
+        private System.Windows.Forms.TableLayoutPanel pnlUbicacion;
         private System.Windows.Forms.ComboBox cmbDepartamentos;
         private System.Windows.Forms.ComboBox cmbMunicipios;
-        private System.Windows.Forms.Label lblUbicacionCliente;
+        private System.Windows.Forms.Label lblUbicacion;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnGuardar;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnLimpiar;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnCancelar;
     }
 }

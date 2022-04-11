@@ -1,8 +1,13 @@
 ﻿using Artemis.Servicios.Base;
+using Artemis.Servicios.Common;
+using Artemis.ViewModels.Identity;
 using Connection.Interfaces.Identity;
 using Common.Util;
 using Models.Identity;
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 
 namespace Artemis.Servicios.Identity
 {
@@ -22,10 +27,16 @@ namespace Artemis.Servicios.Identity
         /// </summary>
         private readonly IUsuarioDao UsuarioDao;
 
+        /// <summary>
+        /// Proveedor de servicios para los Empleados.
+        /// </summary>
+        private readonly EmpleadoService EmpleadoService;
+
         public UsuarioService()
         {
             Handler = new ErrorHandler();
             UsuarioDao = DaoFactory.Get<IUsuarioDao>(Handler);
+            EmpleadoService = new EmpleadoService();
         }
 
         /// <summary>
@@ -59,6 +70,72 @@ namespace Artemis.Servicios.Identity
             Sesion.SetSession(usuario);
         }
 
+        /// <summary>
+        /// Crea un nuevo registro de tipo Usuario en la base de datos tomando en cuenta
+        /// los valores o propiedades del mismo.
+        /// </summary>
+        /// <param name="values">Valores o propiedades del usuario.</param>
+        /// <exception cref="ArgumentNullException">Se dispara cuando no se pasan los valores.</exception>
+        public void Create(IDictionary<string, object> values)
+        {
+            if (values is null) throw new ArgumentNullException(nameof(values), "No es posible crear el usuario sin sus valores.");
+
+            Usuario usuario = UsuarioDao.Create(new Usuario
+            {
+                Nombre = values["Nombre"].ToString(),
+                Contraseña = values["Contraseña"].ToString(),
+                Rol = values["Rol"].ToString(),
+                IdEmpleado = (int)values["IdEmpleado"]
+            });
+
+            if (usuario is null) Handler.Add("MODELO_NULO");
+        }
+
+        /// <inheritdoc cref="IUsuarioDao.Read(string)"/>
+        public IEnumerable<UsuarioView> GetUsuarios(string value)
+        {
+            if (string.IsNullOrWhiteSpace(value)) value = null;
+
+            IEnumerable<Usuario> usuarios = UsuarioDao.Read(value);
+
+            return usuarios.Select(usuario =>
+            {
+                var empleado = EmpleadoService.GetById(usuario.IdEmpleado);
+
+                return new UsuarioView
+                {
+                    Id = usuario.Id,
+                    Nombre = usuario.Nombre,
+                    Rol = usuario.Rol,
+                    Empleado = $"{empleado.PrimerNombre} {empleado.PrimerApellido}"
+                };
+            });
+        }
+
+        /// <summary>
+        /// Modifica un registro de tipo Usuario de la base de datos tomando en cuenta
+        /// los valores o propiedades del mismo.
+        /// </summary>
+        /// <param name="values">Valores o propiedades del usuario.</param>
+        /// <exception cref="ArgumentNullException">Se dispara cuando no se pasan los valores.</exception>
+        public void Update(IDictionary<string, object> values)
+        {
+            if (values is null) throw new ArgumentNullException(nameof(values), "No es posible crear el usuario sin sus valores.");
+
+            Usuario usuario = UsuarioDao.Update(new Usuario
+            {
+                Id = (int)values["Id"],
+                Nombre = values["Nombre"].ToString(),
+                Contraseña = values["Contraseña"].ToString(),
+                Rol = values["Rol"].ToString(),
+                IdEmpleado = (int)values["IdEmpleado"]
+            });
+
+            if (usuario is null) Handler.Add("MODELO_NULO");
+        }
+
+        #region IServicioBase Members
+
         /// <inheritdoc cref="IDisposable.Dispose"/>
         public void Dispose()
         {
@@ -66,9 +143,26 @@ namespace Artemis.Servicios.Identity
         }
 
         /// <inheritdoc cref="IServicioBase.GetErrorMessage"/>
-        public string GetErrorMessage() => Handler.GetErrorMessage();
+        public string GetErrorMessage()
+        {
+            StringBuilder builder = new StringBuilder();
+
+            if (Handler != null && Handler.HasError())
+            {
+                builder.AppendLine(Handler.GetErrorMessage());
+            }
+
+            if (EmpleadoService != null && EmpleadoService.HasError())
+            {
+                builder.AppendLine(EmpleadoService.GetErrorMessage());
+            }
+
+            return builder.ToString();
+        }
 
         /// <inheritdoc cref="IServicioBase.HasError"/>
-        public bool HasError() => Handler.HasError();
+        public bool HasError() => Handler.HasError() || EmpleadoService.HasError();
+
+        #endregion
     }
 }

@@ -33,5 +33,29 @@ namespace Artemis.Properties {
                 return ((string)(this["ConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("artemis@gmail.com")]
+        public string Correo {
+            get {
+                return ((string)(this["Correo"]));
+            }
+            set {
+                this["Correo"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("artemis123")]
+        public string CorreoPassword {
+            get {
+                return ((string)(this["CorreoPassword"]));
+            }
+            set {
+                this["CorreoPassword"] = value;
+            }
+        }
     }
 }

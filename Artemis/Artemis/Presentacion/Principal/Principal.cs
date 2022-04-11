@@ -65,5 +65,15 @@ namespace Artemis.Presentacion.Principal
         {
             AddForm(new Shop.BuscadorProveedores());
         }
+
+        private void BtnUsuarios_Click(object sender, EventArgs e)
+        {
+            AddForm(new Identity.BuscadorUsuarios());
+        }
+
+        private void BtnEmpleados_Click(object sender, EventArgs e)
+        {
+            AddForm(new Common.BuscadorEmpleados());
+        }
     }
 }

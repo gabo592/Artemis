@@ -159,6 +159,7 @@
     <Reference Include="ComponentFactory.Krypton.Workspace">
       <HintPath>..\packages\Krypton\Bin\ComponentFactory.Krypton.Workspace.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -184,11 +185,35 @@
     <Compile Include="Presentacion\Common\BuscadorCategorias.Designer.cs">
       <DependentUpon>BuscadorCategorias.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\Common\BuscadorEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Common\BuscadorEmpleados.Designer.cs">
+      <DependentUpon>BuscadorEmpleados.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\Common\EditarCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Presentacion\Common\EditarCategoria.Designer.cs">
       <DependentUpon>EditarCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Common\EditorEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Common\EditorEmpleado.Designer.cs">
+      <DependentUpon>EditorEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Identity\BuscadorUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Identity\BuscadorUsuarios.Designer.cs">
+      <DependentUpon>BuscadorUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Identity\EditorUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Identity\EditorUsuario.Designer.cs">
+      <DependentUpon>EditorUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\Principal\Login.cs">
       <SubType>Form</SubType>
@@ -229,8 +254,10 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Servicios\Base\IServicioBase.cs" />
+    <Compile Include="Servicios\Base\MailService.cs" />
     <Compile Include="Servicios\Base\Sesion.cs" />
     <Compile Include="Servicios\Common\CategoriasService.cs" />
+    <Compile Include="Servicios\Common\EmpleadoService.cs" />
     <Compile Include="Servicios\Common\UbicacionService.cs" />
     <Compile Include="Servicios\DaoFactory.cs" />
     <Compile Include="Servicios\Identity\UsuarioService.cs" />
@@ -239,7 +266,9 @@
     <Compile Include="Servicios\Sales\ClienteService.cs" />
     <Compile Include="Servicios\Shop\ProveedorService.cs" />
     <Compile Include="ViewModels\Common\CategoriaView.cs" />
+    <Compile Include="ViewModels\Common\EmpleadoView.cs" />
     <Compile Include="ViewModels\Common\MunicipioView.cs" />
+    <Compile Include="ViewModels\Identity\UsuarioView.cs" />
     <Compile Include="ViewModels\Sales\ClienteView.cs" />
     <Compile Include="ViewModels\Shop\ProveedorView.cs" />
     <EmbeddedResource Include="Presentacion\Base\Buscador.resx">
@@ -250,6 +279,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Common\EditarCategoria.resx">
       <DependentUpon>EditarCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Common\EditorEmpleado.resx">
+      <DependentUpon>EditorEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Identity\EditorUsuario.resx">
+      <DependentUpon>EditorUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Principal\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -290,6 +325,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="artemis-logo.ico" />
+    <None Include="Resources\lock.png" />
+    <None Include="Resources\search.png" />
     <None Include="Resources\ventas.png" />
     <None Include="Resources\user.png" />
     <None Include="Resources\delivery-truck.png" />
@@ -325,8 +362,6 @@
       <Name>Models</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ViewModels\Identity\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -306,6 +306,7 @@
             this.btnUsuarios.TextMarginLeft = 0;
             this.btnUsuarios.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnUsuarios.UseDefaultRadiusAndThickness = true;
+            this.btnUsuarios.Click += new System.EventHandler(this.BtnUsuarios_Click);
             // 
             // btnProveedores
             // 
@@ -583,6 +584,7 @@
             this.btnEmpleados.TextMarginLeft = 0;
             this.btnEmpleados.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnEmpleados.UseDefaultRadiusAndThickness = true;
+            this.btnEmpleados.Click += new System.EventHandler(this.BtnEmpleados_Click);
             // 
             // btnCompras
             // 
