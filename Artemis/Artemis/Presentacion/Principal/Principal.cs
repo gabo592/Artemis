@@ -75,5 +75,10 @@ namespace Artemis.Presentacion.Principal
         {
             AddForm(new Common.BuscadorEmpleados());
         }
+
+        private void BtnProductos_Click(object sender, EventArgs e)
+        {
+            AddForm(new Common.BuscadorProductos());
+        }
     }
 }

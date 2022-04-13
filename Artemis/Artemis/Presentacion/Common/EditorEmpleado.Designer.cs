@@ -410,7 +410,7 @@
             this.pnlUbicacion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.100775F));
             this.pnlUbicacion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 96.89922F));
             this.pnlUbicacion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 374F));
-            this.pnlUbicacion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 17F));
+            this.pnlUbicacion.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 18F));
             this.pnlUbicacion.Controls.Add(this.cmbDepartamentos, 1, 0);
             this.pnlUbicacion.Controls.Add(this.cmbMunicipios, 2, 0);
             this.pnlUbicacion.Dock = System.Windows.Forms.DockStyle.Top;
@@ -430,7 +430,7 @@
             this.cmbDepartamentos.FormattingEnabled = true;
             this.cmbDepartamentos.Location = new System.Drawing.Point(14, 3);
             this.cmbDepartamentos.Name = "cmbDepartamentos";
-            this.cmbDepartamentos.Size = new System.Drawing.Size(367, 28);
+            this.cmbDepartamentos.Size = new System.Drawing.Size(366, 28);
             this.cmbDepartamentos.TabIndex = 0;
             this.cmbDepartamentos.SelectedIndexChanged += new System.EventHandler(this.CmbDepartamentos_SelectedIndexChanged);
             // 
@@ -440,7 +440,7 @@
             this.cmbMunicipios.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMunicipios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbMunicipios.FormattingEnabled = true;
-            this.cmbMunicipios.Location = new System.Drawing.Point(387, 3);
+            this.cmbMunicipios.Location = new System.Drawing.Point(386, 3);
             this.cmbMunicipios.Name = "cmbMunicipios";
             this.cmbMunicipios.Size = new System.Drawing.Size(368, 28);
             this.cmbMunicipios.TabIndex = 1;

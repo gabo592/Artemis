@@ -492,6 +492,7 @@
             this.btnProductos.TextMarginLeft = 0;
             this.btnProductos.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnProductos.UseDefaultRadiusAndThickness = true;
+            this.btnProductos.Click += new System.EventHandler(this.BtnProductos_Click);
             // 
             // btnEmpleados
             // 
