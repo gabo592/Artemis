@@ -214,6 +214,7 @@
             this.btnVentas.TextMarginLeft = 0;
             this.btnVentas.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnVentas.UseDefaultRadiusAndThickness = true;
+            this.btnVentas.Click += new System.EventHandler(this.BtnVentas_Click);
             // 
             // btnUsuarios
             // 

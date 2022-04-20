@@ -411,7 +411,7 @@
             this.pnlUbicacionCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.954802F));
             this.pnlUbicacionCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 96.0452F));
             this.pnlUbicacionCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 396F));
-            this.pnlUbicacionCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 18F));
+            this.pnlUbicacionCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 19F));
             this.pnlUbicacionCliente.Controls.Add(this.cmbDepartamentos, 1, 0);
             this.pnlUbicacionCliente.Controls.Add(this.cmbMunicipios, 2, 0);
             this.pnlUbicacionCliente.Dock = System.Windows.Forms.DockStyle.Top;
@@ -432,7 +432,7 @@
             this.cmbDepartamentos.FormattingEnabled = true;
             this.cmbDepartamentos.Location = new System.Drawing.Point(18, 3);
             this.cmbDepartamentos.Name = "cmbDepartamentos";
-            this.cmbDepartamentos.Size = new System.Drawing.Size(379, 28);
+            this.cmbDepartamentos.Size = new System.Drawing.Size(378, 28);
             this.cmbDepartamentos.TabIndex = 0;
             this.cmbDepartamentos.SelectedIndexChanged += new System.EventHandler(this.CmbDepartamentos_SelectedIndexChanged);
             // 
@@ -442,7 +442,7 @@
             this.cmbMunicipios.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMunicipios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbMunicipios.FormattingEnabled = true;
-            this.cmbMunicipios.Location = new System.Drawing.Point(403, 3);
+            this.cmbMunicipios.Location = new System.Drawing.Point(402, 3);
             this.cmbMunicipios.Name = "cmbMunicipios";
             this.cmbMunicipios.Size = new System.Drawing.Size(390, 28);
             this.cmbMunicipios.TabIndex = 1;
@@ -465,7 +465,7 @@
             this.pnlContactoCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.605769F));
             this.pnlContactoCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 96.39423F));
             this.pnlContactoCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 394F));
-            this.pnlContactoCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.pnlContactoCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 21F));
             this.pnlContactoCliente.Controls.Add(this.txtCorreo, 1, 0);
             this.pnlContactoCliente.Controls.Add(this.txtTeléfono, 2, 0);
             this.pnlContactoCliente.Dock = System.Windows.Forms.DockStyle.Top;
@@ -543,7 +543,7 @@
             this.txtCorreo.SelectionLength = 0;
             this.txtCorreo.SelectionStart = 0;
             this.txtCorreo.ShortcutsEnabled = true;
-            this.txtCorreo.Size = new System.Drawing.Size(380, 42);
+            this.txtCorreo.Size = new System.Drawing.Size(379, 42);
             this.txtCorreo.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtCorreo.TabIndex = 0;
             this.txtCorreo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -584,7 +584,7 @@
             this.txtTeléfono.IconRight = null;
             this.txtTeléfono.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTeléfono.Lines = new string[0];
-            this.txtTeléfono.Location = new System.Drawing.Point(403, 3);
+            this.txtTeléfono.Location = new System.Drawing.Point(402, 3);
             this.txtTeléfono.MaxLength = 32767;
             this.txtTeléfono.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtTeléfono.Modified = false;
@@ -648,7 +648,7 @@
             this.pnlEdadCliente.ColumnCount = 3;
             this.pnlEdadCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 1.835985F));
             this.pnlEdadCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 98.16402F));
-            this.pnlEdadCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 21F));
+            this.pnlEdadCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 22F));
             this.pnlEdadCliente.Controls.Add(this.dtNacimiento, 1, 0);
             this.pnlEdadCliente.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlEdadCliente.Location = new System.Drawing.Point(0, 199);
@@ -665,7 +665,7 @@
             this.dtNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtNacimiento.Location = new System.Drawing.Point(17, 3);
             this.dtNacimiento.Name = "dtNacimiento";
-            this.dtNacimiento.Size = new System.Drawing.Size(773, 26);
+            this.dtNacimiento.Size = new System.Drawing.Size(772, 26);
             this.dtNacimiento.TabIndex = 0;
             // 
             // lblEdadCliente
@@ -686,7 +686,7 @@
             this.pnlIdenficacionCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.478261F));
             this.pnlIdenficacionCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 96.52174F));
             this.pnlIdenficacionCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 393F));
-            this.pnlIdenficacionCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 21F));
+            this.pnlIdenficacionCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 22F));
             this.pnlIdenficacionCliente.Controls.Add(this.txtPrimerNombre, 1, 0);
             this.pnlIdenficacionCliente.Controls.Add(this.txtSegundoNombre, 2, 0);
             this.pnlIdenficacionCliente.Controls.Add(this.txtPrimerApellido, 1, 1);
@@ -766,7 +766,7 @@
             this.txtPrimerNombre.SelectionLength = 0;
             this.txtPrimerNombre.SelectionStart = 0;
             this.txtPrimerNombre.ShortcutsEnabled = true;
-            this.txtPrimerNombre.Size = new System.Drawing.Size(381, 43);
+            this.txtPrimerNombre.Size = new System.Drawing.Size(380, 43);
             this.txtPrimerNombre.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtPrimerNombre.TabIndex = 0;
             this.txtPrimerNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -807,7 +807,7 @@
             this.txtSegundoNombre.IconRight = null;
             this.txtSegundoNombre.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSegundoNombre.Lines = new string[0];
-            this.txtSegundoNombre.Location = new System.Drawing.Point(403, 3);
+            this.txtSegundoNombre.Location = new System.Drawing.Point(402, 3);
             this.txtSegundoNombre.MaxLength = 32767;
             this.txtSegundoNombre.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtSegundoNombre.Modified = false;
@@ -920,7 +920,7 @@
             this.txtPrimerApellido.SelectionLength = 0;
             this.txtPrimerApellido.SelectionStart = 0;
             this.txtPrimerApellido.ShortcutsEnabled = true;
-            this.txtPrimerApellido.Size = new System.Drawing.Size(381, 43);
+            this.txtPrimerApellido.Size = new System.Drawing.Size(380, 43);
             this.txtPrimerApellido.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtPrimerApellido.TabIndex = 2;
             this.txtPrimerApellido.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -961,7 +961,7 @@
             this.txtSegundoApellido.IconRight = null;
             this.txtSegundoApellido.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSegundoApellido.Lines = new string[0];
-            this.txtSegundoApellido.Location = new System.Drawing.Point(403, 52);
+            this.txtSegundoApellido.Location = new System.Drawing.Point(402, 52);
             this.txtSegundoApellido.MaxLength = 32767;
             this.txtSegundoApellido.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtSegundoApellido.Modified = false;

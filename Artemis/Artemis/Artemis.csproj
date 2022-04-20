@@ -245,11 +245,23 @@
     <Compile Include="Presentacion\Sales\BuscadorClientes.Designer.cs">
       <DependentUpon>BuscadorClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\Sales\BuscadorVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Sales\BuscadorVentas.Designer.cs">
+      <DependentUpon>BuscadorVentas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\Sales\EditorCliente.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Presentacion\Sales\EditorCliente.Designer.cs">
       <DependentUpon>EditorCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Sales\EditorVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Sales\EditorVenta.Designer.cs">
+      <DependentUpon>EditorVenta.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\Shop\BuscadorProveedores.cs">
       <SubType>Form</SubType>
@@ -277,6 +289,8 @@
     <Compile Include="Servicios\Interfaces\IObservador.cs" />
     <Compile Include="Servicios\Interfaces\ISujeto.cs" />
     <Compile Include="Servicios\Sales\ClienteService.cs" />
+    <Compile Include="Servicios\Sales\DetalleVentaService.cs" />
+    <Compile Include="Servicios\Sales\VentaService.cs" />
     <Compile Include="Servicios\Shop\ProveedorService.cs" />
     <Compile Include="ViewModels\Common\CategoriaView.cs" />
     <Compile Include="ViewModels\Common\EmpleadoView.cs" />
@@ -284,6 +298,8 @@
     <Compile Include="ViewModels\Common\ProductoView.cs" />
     <Compile Include="ViewModels\Identity\UsuarioView.cs" />
     <Compile Include="ViewModels\Sales\ClienteView.cs" />
+    <Compile Include="ViewModels\Sales\DetalleVentaView.cs" />
+    <Compile Include="ViewModels\Sales\VentaView.cs" />
     <Compile Include="ViewModels\Shop\ProveedorView.cs" />
     <EmbeddedResource Include="Presentacion\Base\Buscador.resx">
       <DependentUpon>Buscador.cs</DependentUpon>
@@ -309,8 +325,14 @@
     <EmbeddedResource Include="Presentacion\Principal\Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Sales\BuscadorVentas.resx">
+      <DependentUpon>BuscadorVentas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Sales\EditorCliente.resx">
       <DependentUpon>EditorCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Sales\EditorVenta.resx">
+      <DependentUpon>EditorVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Shop\EditorProveedores.resx">
       <DependentUpon>EditorProveedores.cs</DependentUpon>
@@ -342,6 +364,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="artemis-logo.ico" />
+    <None Include="Resources\trash.png" />
+    <None Include="Resources\add.png" />
     <None Include="Resources\lock.png" />
     <None Include="Resources\search.png" />
     <None Include="Resources\ventas.png" />
