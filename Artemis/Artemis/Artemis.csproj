@@ -291,6 +291,8 @@
     <Compile Include="Servicios\Sales\ClienteService.cs" />
     <Compile Include="Servicios\Sales\DetalleVentaService.cs" />
     <Compile Include="Servicios\Sales\VentaService.cs" />
+    <Compile Include="Servicios\Shop\CompraService.cs" />
+    <Compile Include="Servicios\Shop\DetalleCompraService.cs" />
     <Compile Include="Servicios\Shop\ProveedorService.cs" />
     <Compile Include="ViewModels\Common\CategoriaView.cs" />
     <Compile Include="ViewModels\Common\EmpleadoView.cs" />
@@ -300,6 +302,8 @@
     <Compile Include="ViewModels\Sales\ClienteView.cs" />
     <Compile Include="ViewModels\Sales\DetalleVentaView.cs" />
     <Compile Include="ViewModels\Sales\VentaView.cs" />
+    <Compile Include="ViewModels\Shop\CompraView.cs" />
+    <Compile Include="ViewModels\Shop\DetalleCompraView.cs" />
     <Compile Include="ViewModels\Shop\ProveedorView.cs" />
     <EmbeddedResource Include="Presentacion\Base\Buscador.resx">
       <DependentUpon>Buscador.cs</DependentUpon>
