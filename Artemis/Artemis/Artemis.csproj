@@ -251,12 +251,6 @@
     <Compile Include="Presentacion\Sales\BuscadorClientes.Designer.cs">
       <DependentUpon>BuscadorClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\Sales\BuscadorVentas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Presentacion\Sales\BuscadorVentas.Designer.cs">
-      <DependentUpon>BuscadorVentas.cs</DependentUpon>
-    </Compile>
     <Compile Include="Presentacion\Sales\EditorCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -268,6 +262,12 @@
     </Compile>
     <Compile Include="Presentacion\Sales\EditorVenta.Designer.cs">
       <DependentUpon>EditorVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Sales\BuscadorVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Sales\BuscadorVentas.Designer.cs">
+      <DependentUpon>BuscadorVentas.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\Shop\BuscadorCompras.cs">
       <SubType>Form</SubType>
@@ -343,9 +343,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Principal\Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\Sales\BuscadorVentas.resx">
-      <DependentUpon>BuscadorVentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Sales\EditorCliente.resx">
       <DependentUpon>EditorCliente.cs</DependentUpon>

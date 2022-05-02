@@ -1,62 +1,40 @@
 ﻿using System;
-using System.Linq;
 using System.Windows.Forms;
+using Artemis.Presentacion.Base;
+using Artemis.ViewModels.Sales;
 using Artemis.Servicios.Interfaces;
 using Artemis.Servicios.Sales;
 
 namespace Artemis.Presentacion.Sales
 {
-    public partial class BuscadorVentas : Form, IObservador
+    public partial class BuscadorVentas : BuscadorTransacciones, IObservador
     {
         /// <summary>
-        /// Proveedor de servicios para las ventas.
+        /// Proveedor de serivicios para las Ventas.
         /// </summary>
         private readonly VentaService service;
 
-        public BuscadorVentas()
+        public BuscadorVentas() : base("Ventas")
         {
             InitializeComponent();
             service = new VentaService();
             Actualizar();
         }
 
-        private void BtnAgregar_Click(object sender, EventArgs e)
+        protected override void OnBtnAgregar_Click(object sender, EventArgs args)
         {
-            EditorVenta editor = new EditorVenta(null);
-            editor.AgregarObservador(this);
-            editor.ShowDialog();
-        }
-
-        private void BtnModificar_Click(object sender, EventArgs e)
-        {
-            var ventaView = GetSelected<ViewModels.Sales.VentaView>();
-
-            if (ventaView is null)
-            {
-                MessageBox.Show(this, "Antes de modificar una venta, primero debe seleccionarla.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            var venta = service.GetById(ventaView.Id);
-
-            if (venta is null)
-            {
-                MessageBox.Show(this, $"No se logró identificar la venta con ID: {venta.Id}.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            EditorVenta editorVenta = new EditorVenta(venta);
+            EditorVenta editorVenta = new EditorVenta(null);
             editorVenta.AgregarObservador(this);
             editorVenta.ShowDialog();
         }
 
-        private void BtnEliminar_Click(object sender, EventArgs e)
+        protected override void OnBtnEliminar_Click(object sender, EventArgs args)
         {
-            var ventaView = GetSelected<ViewModels.Sales.VentaView>();
+            VentaView ventaView = GetSelected<VentaView>();
 
             if (ventaView is null)
             {
-                MessageBox.Show(this, "Antes de eliminar una venta, primero debe seleccionarla.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(this, "Para eliminar un registro, primero debe seleccionarlo", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -64,11 +42,11 @@ namespace Artemis.Presentacion.Sales
 
             if (venta is null)
             {
-                MessageBox.Show(this, $"No se logró identificar la venta con ID: {venta.Id}.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(this, $"No se logró encontrar la venta con ID: {venta.Id}.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            DialogResult result = MessageBox.Show(this, $"¿Desea eliminar la venta con ID: {ventaView.Id}?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show(this, $"¿Desea eliminar la venta con ID: {venta.Id}?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (result == DialogResult.No) return;
 
@@ -90,43 +68,53 @@ namespace Artemis.Presentacion.Sales
             }
         }
 
-        private void DtBuscar_ValueChanged(object sender, EventArgs e)
+        protected override void OnBtnModificar_Click(object sender, EventArgs args)
         {
-            Actualizar();
-        }
+            VentaView ventaView = GetSelected<VentaView>();
 
-        private void CheckBuscarFecha_CheckedChanged(object sender, EventArgs e)
-        {
-            dtBuscar.Enabled = checkBuscarFecha.Checked;
-            Actualizar();
-        }
-
-        /// <summary>
-        /// Obtiene el primer modelo seleccionado del DataGridView.
-        /// </summary>
-        /// <typeparam name="TModel">Modelo a seleccionar.</typeparam>
-        /// <returns>Primer modelo seleccionado.</returns>
-        private TModel GetSelected<TModel>() where TModel : new ()
-        {
-            if (dgvVentas.SelectedRows.Count == 0) return default;
-
-            TModel[] models = (TModel[])dgvVentas.DataSource;
-
-            return models[dgvVentas.SelectedRows[0].Index];
-        }
-
-        /// <inheritdoc cref="IObservador.Actualizar"/>
-        public void Actualizar()
-        {
-            if (!checkBuscarFecha.Checked)
+            if (ventaView is null)
             {
-                dgvVentas.DataSource = service.GetVentas().ToArray();
+                MessageBox.Show(this, "Para modificar un registro, primero debe seleccionarlo", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            DateTime fecha = dtBuscar.Value;
+            var venta = service.GetById(ventaView.Id);
 
-            dgvVentas.DataSource = service.GetVentas(fecha).ToArray();
+            if (venta is null)
+            {
+                MessageBox.Show(this, $"No se logró encontrar la venta con ID: {venta.Id}.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            EditorVenta editorVenta = new EditorVenta(venta);
+            editorVenta.AgregarObservador(this);
+            editorVenta.ShowDialog();
         }
+
+        protected override void OnCheckBuscarFecha_CheckedChanged(object sender, EventArgs args)
+        {
+            Actualizar();
+        }
+
+        protected override void OnDtBuscar_ValueChanged(object sender, EventArgs args)
+        {
+            Actualizar();
+        }
+
+        #region IObservador Members
+
+        public void Actualizar()
+        {
+            if (dtBuscar.Enabled)
+            {
+                LoadDataGrid(service.GetVentas(dtBuscar.Value));
+            }
+            else
+            {
+                LoadDataGrid(service.GetVentas());
+            }
+        }
+
+        #endregion
     }
 }
