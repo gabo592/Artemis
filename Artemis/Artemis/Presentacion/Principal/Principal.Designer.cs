@@ -679,6 +679,7 @@
             this.btnCompras.TextMarginLeft = 0;
             this.btnCompras.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnCompras.UseDefaultRadiusAndThickness = true;
+            this.btnCompras.Click += new System.EventHandler(this.BtnCompras_Click);
             // 
             // btnClientes
             // 
