@@ -281,6 +281,12 @@
     <Compile Include="Presentacion\Shop\BuscadorProveedores.Designer.cs">
       <DependentUpon>BuscadorProveedores.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\Shop\EditorCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Shop\EditorCompra.Designer.cs">
+      <DependentUpon>EditorCompra.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\Shop\EditorProveedores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -349,6 +355,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Sales\EditorVenta.resx">
       <DependentUpon>EditorVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Shop\EditorCompra.resx">
+      <DependentUpon>EditorCompra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Shop\EditorProveedores.resx">
       <DependentUpon>EditorProveedores.cs</DependentUpon>

@@ -28,16 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditorProductos));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditorProductos));
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            this.formBorderStyle = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.lblTitulo = new System.Windows.Forms.Label();
             this.pnlBotones = new System.Windows.Forms.FlowLayoutPanel();
             this.btnGuardar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -65,11 +63,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.numPrecio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numStock)).BeginInit();
             this.SuspendLayout();
-            // 
-            // formBorderStyle
-            // 
-            this.formBorderStyle.ElipseRadius = 15;
-            this.formBorderStyle.TargetControl = this;
             // 
             // lblTitulo
             // 
@@ -427,10 +420,10 @@
             // pnlProducto
             // 
             this.pnlProducto.ColumnCount = 4;
-            this.pnlProducto.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.581267F));
-            this.pnlProducto.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 96.41873F));
-            this.pnlProducto.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 351F));
-            this.pnlProducto.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 15F));
+            this.pnlProducto.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.pnlProducto.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.pnlProducto.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.pnlProducto.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.pnlProducto.Controls.Add(this.lblDescripcion, 1, 0);
             this.pnlProducto.Controls.Add(this.txtDescripcion, 2, 0);
             this.pnlProducto.Controls.Add(this.lblPrecio, 1, 1);
@@ -454,9 +447,9 @@
             // 
             this.lblDescripcion.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescripcion.Location = new System.Drawing.Point(15, 0);
+            this.lblDescripcion.Location = new System.Drawing.Point(38, 0);
             this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(327, 85);
+            this.lblDescripcion.Size = new System.Drawing.Size(207, 85);
             this.lblDescripcion.TabIndex = 0;
             this.lblDescripcion.Text = "Descripción";
             this.lblDescripcion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -491,7 +484,7 @@
             this.txtDescripcion.IconRight = null;
             this.txtDescripcion.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtDescripcion.Lines = new string[0];
-            this.txtDescripcion.Location = new System.Drawing.Point(348, 3);
+            this.txtDescripcion.Location = new System.Drawing.Point(251, 3);
             this.txtDescripcion.MaxLength = 32767;
             this.txtDescripcion.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtDescripcion.Modified = false;
@@ -527,7 +520,7 @@
             this.txtDescripcion.SelectionLength = 0;
             this.txtDescripcion.SelectionStart = 0;
             this.txtDescripcion.ShortcutsEnabled = true;
-            this.txtDescripcion.Size = new System.Drawing.Size(345, 79);
+            this.txtDescripcion.Size = new System.Drawing.Size(421, 79);
             this.txtDescripcion.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtDescripcion.TabIndex = 1;
             this.txtDescripcion.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -542,9 +535,9 @@
             // 
             this.lblPrecio.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrecio.Location = new System.Drawing.Point(15, 85);
+            this.lblPrecio.Location = new System.Drawing.Point(38, 85);
             this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(327, 23);
+            this.lblPrecio.Size = new System.Drawing.Size(207, 23);
             this.lblPrecio.TabIndex = 2;
             this.lblPrecio.Text = "Precio";
             this.lblPrecio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -559,7 +552,7 @@
             0,
             0,
             131072});
-            this.numPrecio.Location = new System.Drawing.Point(348, 88);
+            this.numPrecio.Location = new System.Drawing.Point(251, 88);
             this.numPrecio.Maximum = new decimal(new int[] {
             1569325056,
             23283064,
@@ -571,7 +564,7 @@
             0,
             131072});
             this.numPrecio.Name = "numPrecio";
-            this.numPrecio.Size = new System.Drawing.Size(345, 24);
+            this.numPrecio.Size = new System.Drawing.Size(421, 24);
             this.numPrecio.TabIndex = 3;
             this.numPrecio.ThousandsSeparator = true;
             this.numPrecio.Value = new decimal(new int[] {
@@ -584,9 +577,9 @@
             // 
             this.lblStock.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStock.Location = new System.Drawing.Point(15, 118);
+            this.lblStock.Location = new System.Drawing.Point(38, 118);
             this.lblStock.Name = "lblStock";
-            this.lblStock.Size = new System.Drawing.Size(327, 33);
+            this.lblStock.Size = new System.Drawing.Size(207, 33);
             this.lblStock.TabIndex = 4;
             this.lblStock.Text = "Stock";
             this.lblStock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -595,34 +588,24 @@
             // 
             this.numStock.Dock = System.Windows.Forms.DockStyle.Fill;
             this.numStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numStock.Location = new System.Drawing.Point(348, 121);
+            this.numStock.Location = new System.Drawing.Point(251, 121);
             this.numStock.Maximum = new decimal(new int[] {
             1569325056,
             23283064,
             0,
             0});
-            this.numStock.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             this.numStock.Name = "numStock";
-            this.numStock.Size = new System.Drawing.Size(345, 24);
+            this.numStock.Size = new System.Drawing.Size(421, 24);
             this.numStock.TabIndex = 5;
             this.numStock.ThousandsSeparator = true;
-            this.numStock.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             // 
             // lblCategoria
             // 
             this.lblCategoria.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategoria.Location = new System.Drawing.Point(15, 151);
+            this.lblCategoria.Location = new System.Drawing.Point(38, 151);
             this.lblCategoria.Name = "lblCategoria";
-            this.lblCategoria.Size = new System.Drawing.Size(327, 36);
+            this.lblCategoria.Size = new System.Drawing.Size(207, 36);
             this.lblCategoria.TabIndex = 6;
             this.lblCategoria.Text = "Categoría";
             this.lblCategoria.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -633,9 +616,9 @@
             this.cmbCategorias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCategorias.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCategorias.FormattingEnabled = true;
-            this.cmbCategorias.Location = new System.Drawing.Point(348, 154);
+            this.cmbCategorias.Location = new System.Drawing.Point(251, 154);
             this.cmbCategorias.Name = "cmbCategorias";
-            this.cmbCategorias.Size = new System.Drawing.Size(345, 26);
+            this.cmbCategorias.Size = new System.Drawing.Size(421, 26);
             this.cmbCategorias.TabIndex = 7;
             // 
             // lblProducto
@@ -659,7 +642,6 @@
             this.Controls.Add(this.pnlPrincipal);
             this.Controls.Add(this.pnlBotones);
             this.Controls.Add(this.lblTitulo);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "EditorProductos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -676,8 +658,6 @@
         }
 
         #endregion
-
-        private Bunifu.Framework.UI.BunifuElipse formBorderStyle;
         private System.Windows.Forms.Panel pnlPrincipal;
         private System.Windows.Forms.FlowLayoutPanel pnlBotones;
         private System.Windows.Forms.Label lblTitulo;

@@ -30,7 +30,8 @@ namespace Artemis.Presentacion.Shop
 
         protected override void OnBtnAgregar_Click(object sender, EventArgs args)
         {
-            
+            EditorCompra editorCompra = new EditorCompra(null);
+            editorCompra.ShowDialog();
         }
 
         protected override void OnBtnEliminar_Click(object sender, EventArgs args)
